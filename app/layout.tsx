@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Everything Meat",
   description:
-    "An appp for a unique communal meat-sharing experience, fostering connections between buyers and local farmers to select and savor fresh, premium cuts.",
+    "An app for a unique communal meat-sharing experience, fostering connections between buyers and local farmers to select and savor fresh, premium cuts.",
 };
 
 export default function RootLayout({
