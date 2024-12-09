@@ -7,7 +7,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div>
-        <h3>Everything Meatt</h3>
+        <h3>Everything Meat</h3>
       </div>
     </>
   );
