@@ -1,14 +1,15 @@
-import React from "react";
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
+import { Navbar, Button } from "flowbite-react";
 import { FaFacebookF, FaUserCircle } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 
-
-const Navbar = () => {
+const AppNavbar = () => {
   const navLinks = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/allpages/about" },
@@ -26,18 +27,18 @@ const Navbar = () => {
   return (
     <header className="bg-red-700 text-white">
       {/* Top Bar */}
-      <div className="flex justify-between items-center lg:px-20 px-4 py-2 text-sm">
+      <div className="hidden lg:flex justify-between items-center px-6 py-2 text-sm">
         <span>Call Us: +234 9012345578</span>
         <div>
           Sign up to promote your livestock for meat sharing.{" "}
-          <Link href="#" className="text-yellow-300 underline font-bold">
+          <Link href="#" className="text-yellow-300 font-bold">
             Sign up now
           </Link>
         </div>
         <div className="flex items-center space-x-3 text-lg">
           <span className="text-sm font-medium">Follow us:</span>
           {socialLinks.map(({ icon: Icon, href }, index) => (
-            <Link key={index} href={href} className="hover:text-yellow-300">
+            <Link key={index} href={href}>
               <Icon />
             </Link>
           ))}
@@ -45,47 +46,57 @@ const Navbar = () => {
       </div>
 
       {/* Navbar */}
-      <nav className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto flex justify-between items-center lg:px-11 px-4 py-4">
-          {/* Logo */}
-          <Link href="/">
-            <Image
-              src="/everything_meat_logo.png"
-              alt="EverythingMeat Logo"
-              width={150}
-              height={150}
-              className="object-contain h-auto w-auto"
-            />
-          </Link>
+      <Navbar fluid className="bg-white">
+        {/* Logo */}
+        <Navbar.Brand href="/">
+          <Image
+            src="/everything_meat_logo.png"
+            alt="EverythingMeat Logo"
+            width={180}
+            height={50}
+            className="object-contain"
+          />
+        </Navbar.Brand>
 
-          {/* Navigation Links */}
-          <ul className="hidden md:flex space-x-8 font-medium text-black">
-            {navLinks.map((item, index) => (
-              <li
-                key={index}
-                className="focus:font-bold active:font-bold"
-              >
-                <Link href={item.path}>{item.label}</Link>
-              </li>
-            ))}
-          </ul>
+        {/* Hamburger Menu */}
+        <Navbar.Toggle />
 
-          {/* Right Section */}
-          <div className="flex items-center space-x-4">
-            <Link href="#" className="text-red-700 hover:text-red-500">
+        {/* Navigation Links and Icon and Button */}
+        <Navbar.Collapse className="text-center">
+          {navLinks.map(({ label, path }, index) => (
+            <Navbar.Link
+              key={index}
+              href={path}
+              active={false}
+              className="font-normal"
+            >
+              {label}
+            </Navbar.Link>
+          ))}
+          <div className="flex justify-center items-center mt-4 md:hidden space-x-20">
+            <Link href="#" className="text-red-700">
+              <HiOutlineShoppingBag size={30} />
+            </Link>
+            <Button className="bg-red-700 text-white">Book Now</Button>
+            <Link href="#" className="text-red-700">
+              <FaUserCircle size={40} />
+            </Link>
+          </div>
+        </Navbar.Collapse>
+
+        {/* Right Section for Desktop */}
+        <div className="hidden md:flex items-center space-x-4">
+        <Link href="#" className="text-red-700 hover:text-red-500">
               <HiOutlineShoppingBag size={30} />
             </Link>
             <Link href="#" className="text-red-700 hover:text-red-500">
               <FaUserCircle size={40} />
             </Link>
-            <button className="hidden md:block bg-red-700 text-white py-2 px-4 rounded-md hover:bg-red-800 font-bold">
-              Book Now
-            </button>
-          </div>
+          <Button className="bg-red-700 text-white">Book Now</Button>
         </div>
-      </nav>
+      </Navbar>
     </header>
   );
 };
 
-export default Navbar;
+export default AppNavbar;
