@@ -27,7 +27,7 @@ const AppNavbar = () => {
   return (
     <header className="bg-red-700 text-white">
       {/* Top Bar */}
-      <div className="hidden lg:flex justify-between items-center px-6 py-2 text-sm">
+      <div className="hidden md:flex justify-between items-center lg:px-6 py-2 lg:text-sm text-xs px-4">
         <span>Call Us: +234 9012345578</span>
         <div>
           Sign up to promote your livestock for meat sharing.{" "}
@@ -68,7 +68,7 @@ const AppNavbar = () => {
               key={index}
               href={path}
               active={false}
-              className="font-normal"
+              className="font-normal lg:mx-5"
             >
               {label}
             </Navbar.Link>
