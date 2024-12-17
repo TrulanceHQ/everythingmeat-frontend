@@ -25,7 +25,7 @@ const AppNavbar = () => {
   ];
 
   return (
-    <header className="bg-red-700 text-white">
+    <header className="bg-customRed text-white">
       {/* Top Bar */}
       <div className="hidden md:flex justify-between items-center lg:px-6 py-2 lg:text-sm text-xs px-4">
         <span>Call Us: +234 9012345578</span>
@@ -74,11 +74,11 @@ const AppNavbar = () => {
             </Navbar.Link>
           ))}
           <div className="flex justify-center items-center mt-4 md:hidden space-x-20">
-            <Link href="#" className="text-red-700">
+            <Link href="#" className="text-customRed">
               <HiOutlineShoppingBag size={30} />
             </Link>
-            <Button className="bg-red-700 text-white">Book Now</Button>
-            <Link href="#" className="text-red-700">
+            <Button className="bg-customRed text-white">Book Now</Button>
+            <Link href="#" className="text-customRed">
               <FaUserCircle size={40} />
             </Link>
           </div>
@@ -86,13 +86,13 @@ const AppNavbar = () => {
 
         {/* Right Section for Desktop */}
         <div className="hidden md:flex items-center space-x-4">
-        <Link href="#" className="text-red-700 hover:text-red-500">
+        <Link href="#" className="text-customRed">
               <HiOutlineShoppingBag size={30} />
             </Link>
-            <Link href="#" className="text-red-700 hover:text-red-500">
+            <Link href="#" className="text-customRed">
               <FaUserCircle size={40} />
             </Link>
-          <Button className="bg-red-700 text-white">Book Now</Button>
+          <Button className="bg-customRed text-white">Book Now</Button>
         </div>
       </Navbar>
     </header>

@@ -31,7 +31,7 @@ const HeroData = () => {
               <h2 className="md:text-2xl text-lg font-bold">{animal.name}</h2>
               <p className="md:text-base font-normal">{animal.stocks} Stocks</p>
             </div>
-            <button className="bg-red-700 text-white lg:p-5 p-3 rounded-full">
+            <button className="bg-customRed text-white lg:p-5 p-3 rounded-full">
               <PiArrowUpRightBold className="lg:text-3xl md:text-2xl text-lg" />
             </button>
           </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { GoArrowRight } from "react-icons/go";
+import { Button } from "@/components/ui/button";
 
 const FifthPage = () => {
   return (
@@ -25,11 +26,11 @@ const FifthPage = () => {
           high-quality sourced meat, offering new avenues for marketing
           livestock and increasing profits.
         </p>
-        <div className="w-14 border-b-4 border-red-700"></div>
+        <div className="w-14 border-b-4 border-customRed"></div>
         <div>
-          <button className="flex items-center justify-center gap-2 md:px-6 md:py-3 p-3 text-white bg-red-700 rounded-lg font-bold md:mt-10 mt-5 md:text-base text-sm">
+          <Button className="flex items-center justify-center gap-2 md:p-6 p-3 text-white bg-customRed hover:bg-customRed rounded-lg font-bold md:mt-10 mt-5 md:text-base text-sm">
             Explore More <GoArrowRight className="text-lg" />
-          </button>
+          </Button>
         </div>
       </div>
     </div>

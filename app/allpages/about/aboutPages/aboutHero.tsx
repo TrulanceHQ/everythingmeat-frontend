@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { IoChevronBack } from "react-icons/io5";
+import { Button } from "@/components/ui/button";
 
 // Statistics Data
 const stats = [
@@ -16,19 +17,15 @@ const stats = [
 const AboutHero = () => {
   const router = useRouter();
 
-  const handleBackClick = () => {
-    router.push("/"); // Navigate back to the home page
-  };
-
   return (
     <div className="bg-gray-100 pt-5 min-h-screen">
       {/* Back Button */}
-      <button
-        onClick={handleBackClick}
-        className="relative md:top-5 lg:left-10 left-4 bg-red-700 text-white md:px-5 py-3 px-4 rounded-md flex items-center gap-2 font-bold md:text-base text-sm"
-      >
-        <IoChevronBack size={18} /> Back
-      </button>
+      <Button
+      onClick={() => router.push("/")}
+      className="relative md:top-5 lg:left-10 left-4 bg-customRed hover:bg-customRed text-white md:p-5 py-3 px-4 rounded-md flex items-center gap-2 font-bold md:text-base text-sm"
+    >
+      <IoChevronBack size={18} /> Back
+    </Button>
 
       {/* Title Section */}
       <div className="text-center mt-5 mb-20">
@@ -65,7 +62,7 @@ const AboutHero = () => {
         <h1 className="text-2xl font-bold xl:ml-10">
           Welcome to Everything Meat
         </h1>
-        <div className="w-16 border-b-4 border-red-700"></div>
+        <div className="w-16 border-b-4 border-customRed"></div>
         <p className="font-medium xl:pr-8">
           At Everything Meat, we’re very passionate about transforming the very
           essence of how you procure and relish top-tier meats. With our

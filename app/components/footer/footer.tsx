@@ -46,7 +46,7 @@ const Footer = () => {
   ];
 
   return (
-    <FlowbiteFooter container className="bg-red-700 text-white rounded-none">
+    <FlowbiteFooter container className="bg-customRed text-white rounded-none">
       <div className="py-10">
         {/* Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 px-5 lg:items-start items-center">

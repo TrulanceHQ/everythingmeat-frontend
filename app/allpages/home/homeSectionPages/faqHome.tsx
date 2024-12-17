@@ -47,7 +47,7 @@ export default function QuestionHome() {
         {faqs.map((faq, index) => (
           <Accordion.Panel key={index}>
             <Accordion.Title
-              className={`text-lg font-bold ${openIndex === index ? "bg-red-700 text-white" : "bg-white text-black"}`}
+              className={`text-lg font-bold ${openIndex === index ? "bg-customRed text-white" : "bg-white text-black"}`}
               onClick={() => handleToggle(index)}
             >
               <div className="flex justify-between items-center w-full">

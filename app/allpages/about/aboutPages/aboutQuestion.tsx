@@ -40,7 +40,7 @@ const AboutQuestion: FC = () => {
       {aboutSections.map(({ title, content }) => (
         <div key={title}>
           <h2 className="text-xl sm:text-2xl font-bold mb-3">{title}</h2>
-          <div className="w-14 border-b-4 border-red-700 my-3"></div>
+          <div className="w-14 border-b-4 border-customRed my-3"></div>
           <p className="font-medium whitespace-pre-line leading-relaxed">
             {content}
           </p>

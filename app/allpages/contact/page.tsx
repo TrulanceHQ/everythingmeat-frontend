@@ -19,7 +19,7 @@ const ContactPage = () => {
                 alt="Dot Frame"
                 width={126}
                 height={106}
-                className="object-cover relative xl:-top-[284] xl:left-[795] xl:w-[126] md:w-[112] w-[100] -top-[279] lg:left-[635] md:left-[480] left-[273]"
+                className="object-cover relative xl:-top-[284] xl:left-[795] xl:w-[126] md:w-[112] w-[100] -top-[279] lg:left-[635] md:left-[480] left-[273] md:block hidden"
               />
             </div>
             {/* Bottom */}
@@ -29,7 +29,7 @@ const ContactPage = () => {
                 alt="Dot Frame"
                 width={126}
                 height={106}
-                className="object-cover relative  xl:-top-16 xl:left-[428] xl:w-[126] md:w-[112] w-[100] md:-top-[55] lg:left-[280] md:left-[160] -top-[34] left-[36]"
+                className="object-cover relative  xl:-top-16 xl:left-[428] xl:w-[126] md:w-[112] w-[100] md:-top-[55] lg:left-[280] md:left-[160] -top-[34] left-[36] md:block hidden"
               />
             </div>
 
