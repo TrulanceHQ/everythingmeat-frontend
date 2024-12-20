@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { roboto } from "./ui/fonts";
 import "./globals.css";
 
+// Navbar & Footer
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
+
 export const metadata: Metadata = {
   title: "Everything Meat",
   description:
@@ -14,8 +18,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.className} antialiased`} suppressHydrationWarning>
-        
-        {children}</body>
+        <Navbar />
+          {children}
+        <Footer />
+        </body>
     </html>
-  );
+  )
 }
