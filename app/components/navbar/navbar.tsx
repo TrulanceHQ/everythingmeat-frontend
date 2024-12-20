@@ -46,7 +46,7 @@ const AppNavbar = () => {
       </div>
 
       {/* Navbar */}
-      <Navbar fluid className="bg-white">
+      <Navbar fluid className="bg-white relative">
         {/* Logo */}
         <Navbar.Brand href="/">
           <Image
