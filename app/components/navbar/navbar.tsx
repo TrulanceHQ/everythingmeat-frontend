@@ -8,8 +8,12 @@ import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
+import { useRouter, usePathname } from "next/navigation";
 
 const AppNavbar = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
   const navLinks = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/allpages/about" },
@@ -48,7 +52,7 @@ const AppNavbar = () => {
       {/* Navbar */}
       <Navbar fluid className="bg-white">
         {/* Logo */}
-        <Navbar.Brand href="/">
+        <Navbar.Brand onClick={() => router.push("/")}>
           <Image
             src="/everything_meat_logo.png"
             alt="EverythingMeat Logo"
@@ -66,9 +70,9 @@ const AppNavbar = () => {
           {navLinks.map(({ label, path }, index) => (
             <Navbar.Link
               key={index}
-              href={path}
+              onClick={() => router.push(path)}
               active={false}
-              className="font-normal lg:mx-5"
+              className={`font-normal cursor-pointer lg:mx-5 ${pathname === path ? "font-bold" : ""}`}
             >
               {label}
             </Navbar.Link>
@@ -86,12 +90,12 @@ const AppNavbar = () => {
 
         {/* Right Section for Desktop */}
         <div className="hidden md:flex items-center space-x-4">
-        <Link href="#" className="text-customRed">
-              <HiOutlineShoppingBag size={30} />
-            </Link>
-            <Link href="#" className="text-customRed">
-              <FaUserCircle size={40} />
-            </Link>
+          <Link href="#" className="text-customRed">
+            <HiOutlineShoppingBag size={30} />
+          </Link>
+          <Link href="#" className="text-customRed">
+            <FaUserCircle size={40} />
+          </Link>
           <Button className="bg-customRed text-white">Book Now</Button>
         </div>
       </Navbar>
