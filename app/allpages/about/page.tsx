@@ -9,7 +9,7 @@ const AboutPage = () => {
     <AboutQuestion />
     <AboutTeam />
     </>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
