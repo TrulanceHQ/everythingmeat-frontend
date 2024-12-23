@@ -31,7 +31,7 @@ const AppNavbar = () => {
         <span>Call Us: +234 9012345578</span>
         <div>
           Sign up to promote your livestock for meat sharing.{" "}
-          <Link href="#" className="text-yellow-300 font-bold">
+          <Link href="/signup" className="text-yellow-300 font-bold">
             Sign up now
           </Link>
         </div>
