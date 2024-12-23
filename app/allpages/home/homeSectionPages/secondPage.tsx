@@ -46,7 +46,7 @@ const SecondPage = () => {
           we&apos;ve created a platform dedicated to promoting live cattle for
           meat sharing.
         </p>
-        <div className="border-2 border-red-700 w-[75px] mt-2"></div>
+        <div className="border-2 border-customRed w-[75px] mt-2"></div>
         </div>
 
         {/* Features */}
@@ -54,7 +54,7 @@ const SecondPage = () => {
           {features.map((feature, index) => (
             <div key={index} className="flex items-start space-x-4">
               <div
-                className={`md:p-6 p-5 rounded-md flex items-center justify-center bg-red-700`}
+                className={`md:p-6 p-5 rounded-md flex items-center justify-center bg-customRed`}
               >
                 <Image
                   src={feature.imgSrc}

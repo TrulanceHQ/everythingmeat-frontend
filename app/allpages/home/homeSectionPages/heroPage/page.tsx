@@ -2,7 +2,14 @@
 
 import { FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa6";
 import HeroData from "../heroData";
+import { Button } from "@/components/ui/button";
 
+/*************  ✨ Codeium Command ⭐  *************/
+/**
+ * The HeroPage component renders the hero section of the home page.
+ *
+
+/******  d21cb70e-70ba-49f0-aa8d-f5f25539b69e  *******/
 const HeroPage = () => {
   const handleScrollLeft = () => {
     document
@@ -52,9 +59,9 @@ const HeroPage = () => {
           preferred cuts, and enjoy the freshest meat.
         </p>
         {/* Book Now Button */}
-        <button className="md:px-10 px-5 py-3 bg-red-700 text-white text-base font-semibold rounded-lg">
+        <Button className="md:p-6 px-5 py-3 bg-customRed hover:bg-customRed text-white text-base font-semibold rounded-lg">
           Book Now
-        </button>
+        </Button>
         {/* User Section */}
         <div className="flex flex-wrap items-center space-x-2 justify-center lg:justify-start">
           <div className="flex -space-x-6 mt-8">
@@ -88,13 +95,13 @@ const HeroPage = () => {
         {/* Navigation Buttons */}
         <div className="flex lg:justify-start space-x-4 sm:space-x-6 mt-6 lg:ps-11 justify-center">
           <button
-            className="bg-red-700 text-white md:p-5 p-3 rounded-full hover:bg-amber-500 hover:text-black"
+            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-amber-500 hover:text-black"
             onClick={handleScrollLeft}
           >
             <FaArrowLeft />
           </button>
           <button
-            className="bg-red-700 text-white md:p-5 p-3 rounded-full hover:bg-amber-500 hover:text-black"
+            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-amber-500 hover:text-black"
             onClick={handleScrollRight}
           >
             <FaArrowRight />

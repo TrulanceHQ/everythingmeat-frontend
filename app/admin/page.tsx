@@ -6,6 +6,7 @@ import { CardData } from "./data/cardData";
 import Card from "./cardSection/Card";
 import DashboardTable from "./components/DashboardTable";
 import { DashboardTableData } from "./data/dashboardTableData";
+import { FilterIcon } from "lucide-react";
 // type Props = {}
 
 const page = () => {
@@ -51,8 +52,12 @@ const page = () => {
         </div>
 
         <div className="bg-white my-10 rounded-2xl">
-          <div className="px-10 py-5">
+          <div className="px-10 py-5 flex flex-row justify-between">
             <h3 className="font-bold text-2xl">Payment Request</h3>
+            <div className="flex flex-row space-x-2 justify-center items-center">
+              <FilterIcon size={20} />
+              <h3 className="font-normal text-xl">Filter</h3>
+            </div>
           </div>
           <DashboardTable DashboardTableData={DashboardTableData} />
         </div>

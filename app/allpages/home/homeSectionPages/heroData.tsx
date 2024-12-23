@@ -1,4 +1,3 @@
-// import { Carousel } from "flowbite-react";
 import { PiArrowUpRightBold } from "react-icons/pi";
 
 const animals = [
@@ -13,7 +12,7 @@ const animals = [
 
 const HeroData = () => {
   return (
-    <div className="container mx-auto flex flex-row space-x-6 overflow-x-scroll scrollbar-hide scrollable w-full overflow-hidden">
+    <div className="container mx-auto flex flex-row space-x-6 overflow-x-hidden scrollbar-hide scrollable w-full overflow-hidden">
       {animals.map((animal, index) => (
         <div
           key={index}
@@ -31,7 +30,7 @@ const HeroData = () => {
               <h2 className="md:text-2xl text-lg font-bold">{animal.name}</h2>
               <p className="md:text-base font-normal">{animal.stocks} Stocks</p>
             </div>
-            <button className="bg-red-700 text-white lg:p-5 p-3 rounded-full">
+            <button className="bg-customRed text-white lg:p-5 p-3 rounded-full">
               <PiArrowUpRightBold className="lg:text-3xl md:text-2xl text-lg" />
             </button>
           </div>

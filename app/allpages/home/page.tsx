@@ -3,7 +3,7 @@ import FifthPage from "./homeSectionPages/fifthPage"
 import HeroPage from "./homeSectionPages/heroPage/page"
 import SecondPage from "./homeSectionPages/secondPage"
 import ThirdPage from "./homeSectionPages/thirdPage"
-// import HomeStock from "./homeStock/page"
+import HomeStock from "./homeStock/page"
 
 
 const HomePage = () => {
@@ -12,7 +12,7 @@ const HomePage = () => {
     <HeroPage />
     <SecondPage />
     <ThirdPage />
-    {/* <HomeStock /> */}
+    <HomeStock />
     <FifthPage />
     {/* Customer */}
     <QuestionHome />
