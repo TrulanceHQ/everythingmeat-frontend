@@ -1,15 +1,13 @@
-import AboutHero from "./aboutPages/aboutHero";
-import AboutQuestion from "./aboutPages/aboutQuestion";
+import AboutHero from "./aboutPages/aboutHero"
+import AboutQuestion from "./aboutPages/aboutQuestion"
+import AboutTeam from "./aboutPages/aboutTeam"
 
 const AboutPage = () => {
   return (
     <>
-      <div>
-        <AboutHero />
-      </div>
-      <div>
-        <AboutQuestion />
-      </div>
+    <AboutHero />
+    <AboutQuestion />
+    <AboutTeam />
     </>
   );
 };
