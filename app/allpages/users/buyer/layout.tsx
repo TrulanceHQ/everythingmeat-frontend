@@ -7,7 +7,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     return (
         <div className="bg-gray-100 overflow-hidden">
             <BuyerHeader />
-            <div className="flex flex-col lg:flex-row gap-1 justify-around min-h-[500px] w-screen items-start mt-3 mb-6 py-4 pl-4 bg-white">
+            <div className="flex flex-col lg:flex-row gap-1 justify-around min-h-[500px] w-screen items-start md:items-center mt-3 mb-6 py-4 pl-4 bg-white">
                 <SideNavbar />
                 {children}
             </div>

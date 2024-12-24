@@ -13,6 +13,10 @@ import {Button} from "@/components/ui/button";
 
 const Page = () => {
     const [image, setImage] = useState<File | null>(null);
+    const fileInputRef = React.createRef<HTMLInputElement>();
+    const handleImageClick = () => {
+        fileInputRef.current?.click();
+    };
     return (
         <div className="mb-2 w-full lg:w-[930px]">
             <form className="p-2 flex flex-col gap-2">
@@ -22,9 +26,13 @@ const Page = () => {
                         src={image ? URL.createObjectURL(image) : profile_img}
                         alt="profile Img"
                         className="rounded-full w-28 h-28 object-cover"
+                        onClick={handleImageClick}
+                        width={112}
+                        height={112}
                     />
                     <input
                         type="file"
+                        ref={fileInputRef}
                         onChange={(e) => setImage((e.target as HTMLInputElement).files?.[0] || null)}
                         hidden
                         className="hover:cursor-pointer"
@@ -33,6 +41,7 @@ const Page = () => {
                         src={profile_icon}
                         alt="Profile Icon"
                         className="z-10 relative bottom-12 rounded-full left-24"
+                        onClick={handleImageClick}
                     />
                 </div>
                 {/* FIRST & LAST NAME */}
