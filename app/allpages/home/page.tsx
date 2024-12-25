@@ -1,9 +1,11 @@
-import QuestionHome from "./homeSectionPages/faqHome"
-import FifthPage from "./homeSectionPages/fifthPage"
-import HeroPage from "./homeSectionPages/heroPage/page"
-import SecondPage from "./homeSectionPages/secondPage"
-import ThirdPage from "./homeSectionPages/thirdPage"
-import HomeStock from "./homeStock/page"
+// components
+import HeroPage from "./components/heroPage/page"
+import SecondPage from "./components/secondPage"
+import ThirdPage from "./components/thirdPage"
+import HomeStock from "./components/homeStock"
+import FifthPage from "./components/fifthPage"
+import TestimonialReview from "./components/testimonialReview"
+import QuestionHome from "./components/faqHome"
 
 
 const HomePage = () => {
@@ -14,7 +16,7 @@ const HomePage = () => {
     <ThirdPage />
     <HomeStock />
     <FifthPage />
-    {/* Customer */}
+    <TestimonialReview />
     <QuestionHome />
     </>
   )

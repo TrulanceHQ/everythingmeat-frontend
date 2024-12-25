@@ -1,15 +1,10 @@
 "use client";
 
 import { FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa6";
-import HeroData from "../heroData";
 import { Button } from "@/components/ui/button";
+import HeroData from "./component/heroData";
 
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * The HeroPage component renders the hero section of the home page.
- *
 
-/******  d21cb70e-70ba-49f0-aa8d-f5f25539b69e  *******/
 const HeroPage = () => {
   const handleScrollLeft = () => {
     document
