@@ -1,3 +1,5 @@
+'use client'
+
 import { Navbar } from 'flowbite-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -9,14 +11,16 @@ const Nav = () => {
   return (
     <div>
           <Navbar fluid rounded>
-            <Navbar.Brand as={Link} href="https://flowbite-react.com">
+            <Navbar.Brand as={Link} href="/everything_meat_logo.png">
               <Image
-                src="/favicon.svg"
+                src="/everything_meat_logo.png"
                 className="mr-3 h-6 sm:h-9"
                 alt="Flowbite React Logo"
+                width={50}
+                height={100}
               />
               <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-                Flowbite React
+                Everything Meat
               </span>
             </Navbar.Brand>
             <Navbar.Toggle />
