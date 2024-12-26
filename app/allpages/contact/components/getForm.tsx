@@ -18,7 +18,7 @@ const formFields = [
 
 const GetForm = () => {
   return (
-    <div className="w-full md:px-20 px-5 py-12 grid lg:grid-cols-2 gap-8 items-start bg-white">
+    <div className="w-full md:px-20 px-5 py-12 grid lg:grid-cols-2 gap-8 items-start bg-white relative z-50">
       {/* Left Section: Contact Form */}
       <div>
         <h2 className="md:text-3xl text-2xl font-bold mb-2">Get In Touch</h2>
@@ -84,7 +84,7 @@ const GetForm = () => {
       </div>
 
       {/* Right Section: Contact Info */}
-      <div className="bg-customRed text-white p-12 lg:mt-[118] lg:ml-10 xl:ml-40 rounded-xl md:w-96 w-full h-[490]">
+      <div className="bg-customRed text-white p-12 lg:mt-[118] mx-auto rounded-xl md:w-96 w-full h-[490]">
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-bold mb-1">Address</h3>

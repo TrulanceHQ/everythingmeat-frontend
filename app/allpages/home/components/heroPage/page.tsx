@@ -2,7 +2,7 @@
 
 import { FaArrowLeft, FaArrowRight, FaPlus } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import HeroData from "./component/heroData";
+import HeroData from "./components/heroData";
 
 
 const HeroPage = () => {
