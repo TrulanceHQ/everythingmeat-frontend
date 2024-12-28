@@ -5,7 +5,6 @@ import GetForm from "./components/getForm";
 const ContactPage = () => {
   return (
     <div className="bg-gray-100 pt-2 min-h-screen relative">
-      {" "}
       {/* Title Section */}
       <div className="text-center mt-20 mb-20">
         <h1 className="md:text-3xl text-2xl font-bold text-black mb-3">

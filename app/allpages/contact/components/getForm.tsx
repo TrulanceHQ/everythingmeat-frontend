@@ -45,7 +45,7 @@ const GetForm = () => {
                     id={field.id}
                     type={field.type}
                     placeholder={field.placeholder}
-                    className={`w-full xl:w-[320px] h-14 border-2 shadow-none rounded-xl ${field.icon ? "pl-12" : ""}`}
+                    className={`w-full xl:w-[320px] h-14 border-2 shadow-none rounded-xl focus:border-customRed ${field.icon ? "pl-12" : ""}`}
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const GetForm = () => {
               id="subject"
               type="text"
               placeholder={formFields[2].placeholder}
-              className="w-full xl:w-[650] h-14 border-2 shadow-none rounded-xl"
+              className="w-full xl:w-[650] h-14 border-2 shadow-none rounded-xl focus:border-customRed"
             />
           </div>
 
@@ -73,7 +73,7 @@ const GetForm = () => {
             <Textarea
               id="message"
               placeholder={formFields[3].placeholder}
-              className="w-full xl:w-[650] h-52 border-gray-300 border-2 shadow-none rounded-xl"
+              className="w-full xl:w-[650] h-52 border-2 border-gray-300 shadow-none rounded-xl focus:border-4 focus:border-customRed focus-visible:ring-0"
             />
           </div>
 
