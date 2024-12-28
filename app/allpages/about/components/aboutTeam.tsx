@@ -59,7 +59,7 @@ const AboutTeam = () => {
             <div
               key={member.name}
               className={`relative cursor-pointer duration-300 ${
-                isExpanded ? "w-[392px] h-[490px]" : "w-[183px] h-[490px]"
+                isExpanded ? "w-[392px] h-[490px] cursor-none" : "w-[183px] h-[490px]"
               }`}
               onClick={() => toggleExpand(member.name)}
             >
