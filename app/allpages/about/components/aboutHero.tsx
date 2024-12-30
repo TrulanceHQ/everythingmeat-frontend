@@ -37,23 +37,23 @@ const AboutHero = () => {
 
       {/* Dot Frame */}
       {/* Top */}
-      <div className="absolute">
+      <div className="absolute z-10 hidden md:block">
         <Image
           src="/dotframe.png"
           alt="Dot Frame"
           width={126}
           height={106}
-          className="object-cover relative xl:-top-[284] xl:left-[795] xl:w-[126] md:w-[112] w-[100] -top-[279] lg:left-[635] md:left-[480] left-[273] z-45"
+          className="object-cover relative xl:-top-[275] xl:left-[850] xl:w-[126] w-[112] -top-[272] lg:left-[635] md:left-[480]"
         />
       </div>
       {/* Bottom */}
-      <div className="absolute">
+      <div className="absolute hidden md:block">
         <Image
           src="/dotframe.png"
           alt="Dot Frame"
           width={126}
           height={106}
-          className="object-cover relative  xl:-top-16 xl:left-[428] xl:w-[126] md:w-[112] w-[100] md:-top-[55] lg:left-[280] md:left-[160] -top-[34] left-[36] z-45"
+          className="object-cover relative  xl:-top-16 xl:left-[428] xl:w-[126] w-[112] -top-[58] lg:left-[280] left-[160] z-45"
         />
       </div>
 

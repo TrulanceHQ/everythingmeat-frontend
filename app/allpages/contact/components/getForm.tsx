@@ -18,7 +18,7 @@ const formFields = [
 
 const GetForm = () => {
   return (
-    <div className="w-full md:px-20 px-5 py-12 grid lg:grid-cols-2 gap-8 items-start bg-white">
+    <div className="w-full md:px-20 px-5 py-12 grid lg:grid-cols-2 gap-8 items-start bg-white relative z-50">
       {/* Left Section: Contact Form */}
       <div>
         <h2 className="md:text-3xl text-2xl font-bold mb-2">Get In Touch</h2>
@@ -45,7 +45,7 @@ const GetForm = () => {
                     id={field.id}
                     type={field.type}
                     placeholder={field.placeholder}
-                    className={`w-full xl:w-[320px] h-14 border-2 shadow-none rounded-xl ${field.icon ? "pl-12" : ""}`}
+                    className={`w-full xl:w-[320px] h-14 border-2 shadow-none rounded-xl focus:border-customRed ${field.icon ? "pl-12" : ""}`}
                   />
                 </div>
               </div>
@@ -61,7 +61,7 @@ const GetForm = () => {
               id="subject"
               type="text"
               placeholder={formFields[2].placeholder}
-              className="w-full xl:w-[650] h-14 border-2 shadow-none rounded-xl"
+              className="w-full xl:w-[650] h-14 border-2 shadow-none rounded-xl focus:border-customRed"
             />
           </div>
 
@@ -73,7 +73,7 @@ const GetForm = () => {
             <Textarea
               id="message"
               placeholder={formFields[3].placeholder}
-              className="w-full xl:w-[650] h-52 border-gray-300 border-2 shadow-none rounded-xl"
+              className="w-full xl:w-[650] h-52 border-2 border-gray-300 shadow-none rounded-xl focus:border-4 focus:border-customRed focus-visible:ring-0"
             />
           </div>
 
@@ -84,7 +84,7 @@ const GetForm = () => {
       </div>
 
       {/* Right Section: Contact Info */}
-      <div className="bg-customRed text-white p-12 lg:mt-[118] lg:ml-10 xl:ml-40 rounded-xl md:w-96 w-full h-[490]">
+      <div className="bg-customRed text-white p-12 lg:mt-[118] mx-auto rounded-xl md:w-96 w-full h-[490]">
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-bold mb-1">Address</h3>
