@@ -9,6 +9,7 @@ import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
 import { useRouter, usePathname } from "next/navigation";
+import DynamicSection from "./DynamicSection";
 
 const AppNavbar = () => {
   const router = useRouter();
@@ -33,12 +34,7 @@ const AppNavbar = () => {
       {/* Top Bar */}
       <div className="hidden md:flex justify-between items-center lg:px-6 py-2 lg:text-sm text-xs px-4">
         <span>Call Us: +234 9012345578</span>
-        <div>
-          Sign up to promote your livestock for meat sharing.{" "}
-          <Link href="/signup" className="text-yellow-300 font-bold">
-            Sign up now
-          </Link>
-        </div>
+        <div><DynamicSection /></div>
         <div className="flex items-center space-x-3 text-lg">
           <span className="text-sm font-medium">Follow us:</span>
           {socialLinks.map(({ icon: Icon, href }, index) => (

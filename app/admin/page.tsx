@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./components/Nav";
+
 import Head from "./components/Head";
 import Image from "next/image";
 import { CardData } from "./data/cardData";
@@ -12,17 +12,14 @@ import { FilterIcon } from "lucide-react";
 const page = () => {
   return (
     <div className="relative">
-      <div className="z-40 relative">
-        <Nav />
-      </div>
       <div className=" bg-customGray py-12 px-16">
-        <Image
+        {/* <Image
           src={"/dotframe.png"}
           alt={""}
           width={90}
           height={70}
-          className="absolute right-[500] top-[30] hidden lg:block"
-        ></Image>
+          className="absolute right-[500] top-[-30] hidden lg:block"
+        ></Image> */}
 
         <Head imageSource="/admin_profile.png" />
 
