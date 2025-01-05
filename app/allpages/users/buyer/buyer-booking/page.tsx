@@ -102,7 +102,7 @@ export function Page() {
                             </div>
                             {/* NO OF SLOT */}
                             <div className="flex justify-end w-1/4">
-                                <p className="text-[20px] font-medium">{`Slot ${item.slotNumber}`}</p>
+                                <p className="text-[20px] font-medium">{`Slot ${item.quantity}`}</p>
                             </div>
                         </div>
 
