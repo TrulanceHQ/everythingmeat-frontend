@@ -1,16 +1,12 @@
 import CheckOutHeader from "../components/checkoutHeader/checkoutHeader";
-import BookingSummary from "../components/bookingSummary/bookingSummary";
-//import "./globals.css";
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (
         <div className="bg-gray-100 overflow-hidden">
             <CheckOutHeader />
-            <div className="flex flex-col lg:flex-row gap-1 justify-center flex-auto lg:justify-around h-fit w-screen items-start md:items-center mb-6 bg-white">
-                {children}
-                <BookingSummary />
+            <div className="flex justify-center items-start  w-screen gap-2">
+                <div className="lg:max-h-[984px] lg:max-w-[926px] md:w-1/2 bg-white mb-8">{children}</div>
             </div>
-            <div className="bg-gray-100 h-10"></div>
         </div>
     );
 }
