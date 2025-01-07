@@ -54,3 +54,4 @@ export function Page() {
     );
 }
 export default Page;
+// To view this page go to: "http://localhost:3000/allpages/users/buyer/buyer-account/myOrder"
