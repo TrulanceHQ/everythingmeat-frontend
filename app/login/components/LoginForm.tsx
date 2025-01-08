@@ -51,7 +51,7 @@ const LoginForm = () => {
       password: values.password,
     };
     userLogin(userCredentails);
-    console.log(values);
+
   }
 
   const [showPassword, setShowPassword] = useState(false);
@@ -148,7 +148,7 @@ const LoginForm = () => {
           )}
           <Button
             type="submit"
-            className="w-full bg-customRed text-base font-bold py-5"
+            className="w-full bg-customRed text-base text-center font-bold py-5"
           >
             {loading ? "Signing in..." : "Sign In"}
           </Button>

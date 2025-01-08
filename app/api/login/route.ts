@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
           process.env.NODE_ENV !== "development" &&
           process.env.NODE_ENV !== "test",
         httpOnly: true,
-        maxAge: 20 * 60, // 20 minutes
+        maxAge: 40 * 60, // 20 minutes
         path: "/",
         sameSite: "strict",
       });
