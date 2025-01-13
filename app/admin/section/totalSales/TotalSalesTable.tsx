@@ -8,26 +8,17 @@ import {
 } from "@/components/ui/table";
 import React, { useState } from "react";
 import { TotalSalesData } from "./TotalSalesData";
-
-
+import Pagination from "../components/Pagination";
 
 const TotalSalesTable = () => {
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 10;
   const data = TotalSalesData;
 
-  const handleClick = (pageNumber: number) => {
-    setCurrentPage(pageNumber);
-  };
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 10;
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = data.slice(indexOfFirstItem, indexOfLastItem);
-
-  const pageNumbers = [];
-  for (let i = 1; i <= Math.ceil(data.length / itemsPerPage); i++) {
-    pageNumbers.push(i);
-  }
 
   return (
     <div className="my-4">
@@ -42,7 +33,9 @@ const TotalSalesTable = () => {
         <TableBody>
           {currentItems.map((item, index) => (
             <TableRow key={index} className="flex justify-between">
-              <TableCell className="font-normal text-base">{item.productId}</TableCell>
+              <TableCell className="font-normal text-base">
+                {item.productId}
+              </TableCell>
               <TableCell>{item.productName}</TableCell>
               <TableCell>{item.price}</TableCell>
             </TableRow>
@@ -50,21 +43,12 @@ const TotalSalesTable = () => {
         </TableBody>
       </Table>
 
-      <div className="flex justify-center mt-4">
-        {pageNumbers.map((number) => (
-          <button
-            key={number}
-            onClick={() => handleClick(number)}
-            className={`mx-1 px-3 py-1 border rounded-full ${
-              currentPage === number
-                ? "bg-customRed text-white"
-                : "bg-white text-[#101010]"
-            }`}
-          >
-            {number}
-          </button>
-        ))}
-      </div>
+      <Pagination
+        currentPage={currentPage}
+        totalItems={data.length}
+        itemsPerPage={itemsPerPage}
+        onPageChange={setCurrentPage}
+      />
     </div>
   );
 };
