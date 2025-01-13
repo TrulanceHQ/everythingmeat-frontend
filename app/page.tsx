@@ -1,14 +1,10 @@
-import Head from "next/head";
+import HomePage from "./allpages/home/page";
+
 
 export default function Home() {
   return (
     <>
-      <Head>
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <div>
-        <h3>Everything Meat</h3>
-      </div>
+      <HomePage />
     </>
   );
 }
