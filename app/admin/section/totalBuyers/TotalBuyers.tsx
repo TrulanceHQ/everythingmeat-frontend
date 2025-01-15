@@ -22,6 +22,7 @@ const TotalBuyers = ({ onClick, handleSectionClick }: Props) => {
 
   const handleSelectedSeller = (clickedId: string) => {
     setBuyerId(clickedId);
+    console.log(clickedId)
     setActiveComponent("userProfile");
   };
 
@@ -31,7 +32,7 @@ const TotalBuyers = ({ onClick, handleSectionClick }: Props) => {
         return <TotalBuyersDefault clickId={handleSelectedSeller} />;
       case "userProfile":
         return (
-          <BuyerProfileDetailsPage onClick={onBackClick} sellerId={buyerId} />
+          <BuyerProfileDetailsPage onClick={onBackClick} buyerId={buyerId} />
         );
     }
   };
