@@ -30,7 +30,7 @@ const AppNavbar = () => {
   ];
 
   return (
-    <header className="bg-customRed text-white">
+    <header className="bg-customRed text-white z-50">
       {/* Top Bar */}
       <div className="hidden md:flex justify-between items-center lg:px-6 py-2 lg:text-sm text-xs px-4">
         <span>Call Us: +234 9012345578</span>
@@ -46,7 +46,7 @@ const AppNavbar = () => {
       </div>
 
       {/* Navbar */}
-      <Navbar fluid className="bg-white relative">
+      <Navbar fluid className="bg-white relative z-50">
         {/* Logo */}
         <Navbar.Brand onClick={() => router.push("/")}>
           <Image
