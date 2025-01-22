@@ -14,8 +14,8 @@ type Props = {
 
 const FilterComponent = ({ items }: Props) => {
   return (
-    <div className="flex flex-col lg:flex-row lg:space-x-4 space-y-2 lg:space-y-0">
-      <div className="flex flex-row lg:space-x-2 lg:justify-center items-center">
+    <div className="flex flex-row justify-between space-x-3 lg:space-x-4 space-y-2 lg:space-y-0">
+      <div className="flex flex-row  lg:space-x-2 lg:justify-center items-center">
         <FilterIcon size={20} />
         <h3 className="font-normal text-xl">Filter</h3>
       </div>
