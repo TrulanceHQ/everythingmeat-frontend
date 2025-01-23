@@ -50,7 +50,7 @@ export default function FaqHome() {
               <AccordionTrigger
                 onClick={() => handleToggle(index)}
                 className={`text-start text-base md:text-lg font-bold px-8 py-5 rounded-2xl border-[1px] border-gray-400 ${
-                  expandedIndex === index ? "bg-customRed text-white border-b-0 rounded-b-none" : "mb-5"
+                  expandedIndex === index ? "bg-customRed text-white border-b-0 rounded-b-none" : "mb-5 hover:bg-gray-100"
                 } flex justify-between items-center`}
               >
                 {faq.question}

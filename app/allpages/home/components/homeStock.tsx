@@ -69,8 +69,8 @@ const HomeStock = () => {
     <section className="px-4 sm:px-10 md:px-20 py-10 sm:py-20 bg-gray-100">
       {/* Text Header Start*/}
       <div className="text-center">
-        <h2 className="text-2xl font-bold mb-2">Most Popular Stocks</h2>
-        <p className="mb-2 px-4 sm:px-10 lg:px-40 xl:px-96">
+        <h2 className="md:text-3xl text-2xl font-bold mb-2">Most Popular Stocks</h2>
+        <p className="mb-2 px-4 sm:px-10 xl:px-96 lg:px-40">
           Discover our most sought-after live cattle breeds for meat sharing, carefully selected based on quality and flavor.
         </p>
         <div className="w-14 border-b-4 border-customRed mx-auto"></div>

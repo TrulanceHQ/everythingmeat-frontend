@@ -34,7 +34,7 @@ const AboutTeam = () => {
   const [expandedMember, setExpandedMember] = useState<string | null>(teamMembers[0].name);
 
   const toggleExpand = (name: string) => {
-    setExpandedMember((prev) => (prev === name ? null : name));
+    setExpandedMember(name); // Always set the clicked member as expanded
   };
 
   useEffect(() => {
@@ -59,7 +59,7 @@ const AboutTeam = () => {
             <div
               key={member.name}
               className={`relative cursor-pointer duration-300 ${
-                isExpanded ? "w-[392px] h-[490px]" : "w-[183px] h-[490px]"
+                isExpanded ? "w-[392px] h-[490px] cursor-none" : "w-[183px] h-[490px]"
               }`}
               onClick={() => toggleExpand(member.name)}
             >

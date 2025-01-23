@@ -2,15 +2,15 @@
 
 import React, { useState } from "react";
 import AdminDefault from "./section/AdminDefault";
-import PersonalInformation from "./section/PersonalInformation";
-import MyProduct from "./section/MyProduct";
-import PaymentRequest from "./section/PaymentRequest";
-import ChangePassword from "./section/ChangePassword";
-import Logout from "./section/Logout";
 import TotalSales from "./section/totalSales/TotalSales";
 import TotalCommission from "./section/totalCommissions/TotalCommission";
 import TotalSellers from "./section/totalSellers/TotalSellers";
 import TotalBuyers from "./section/totalBuyers/TotalBuyers";
+import PersonalInformation from "./section/personalInformation/PersonalInformation";
+import MyProduct from "./section/productList/MyProduct";
+import PaymentRequest from "./section/paymentRequest/PaymentRequest";
+import ChangePassword from "./section/changePassword/ChangePassword";
+import Logout from "./section/logOut/Logout";
 
 const Page: React.FC = () => {
   const [activeComponent, setActiveComponent] = useState<string>("Default");

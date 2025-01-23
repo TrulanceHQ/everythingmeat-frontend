@@ -1,6 +1,6 @@
-import AboutHero from "./aboutPages/aboutHero"
-import AboutQuestion from "./aboutPages/aboutQuestion"
-import AboutTeam from "./aboutPages/aboutTeam"
+import AboutHero from "./components/aboutHero"
+import AboutQuestion from "./components/aboutQuestion"
+import AboutTeam from "./components/aboutTeam"
 
 const AboutPage = () => {
   return (

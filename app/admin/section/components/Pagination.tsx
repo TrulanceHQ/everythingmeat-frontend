@@ -28,25 +28,10 @@ const Pagination = ({
     }
   };
 
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
-
-  const startPage = Math.max(1, currentPage - 1);
-  const endPage = Math.min(startPage + 2, pageNumbers.length);
-  const visiblePageNumbers = pageNumbers.slice(startPage - 1, endPage);
-
-  return (
-    <div className="flex justify-center mt-4">
-      <button
-        onClick={handlePrevClick}
-        className="mx-1 px-3 py-1 border rounded-full bg-white text-[#101010]"
-        disabled={currentPage === 1}
-      >
-        <IoIosArrowBack />
-      </button>
-      {visiblePageNumbers.map((number) => (
+  const renderPageNumbers = () => {
+    if (totalPages <= 4) {
+      // If total pages is 4 or less, show all pages without ellipsis
+      return Array.from({ length: totalPages }, (_, i) => i + 1).map((number) => (
         <button
           key={number}
           onClick={() => onPageChange(number)}
@@ -58,10 +43,69 @@ const Pagination = ({
         >
           {number}
         </button>
-      ))}
+      ));
+    }
+
+    let pagesToShow = [];
+
+    if (currentPage <= 2) {
+      // Show first 3 pages + ellipsis + last page
+      pagesToShow = [1, 2, 3, "ellipsis", totalPages];
+    } else if (currentPage >= totalPages - 1) {
+      // Show first page + ellipsis + last 3 pages
+      pagesToShow = [1, "ellipsis", totalPages - 2, totalPages - 1, totalPages];
+    } else {
+      // Show first page + current page and its neighbors + ellipsis + last page
+      pagesToShow = [
+        1,
+        "ellipsis",
+        currentPage,
+        "ellipsis",
+        totalPages,
+      ];
+    }
+
+    return pagesToShow.map((item, index) => {
+      if (item === "ellipsis") {
+        return (
+          <span
+            key={`ellipsis-${index}`}
+            className="mx-1 px-3 py-1 text-[#101010]"
+          >
+            ...
+          </span>
+        );
+      }
+
+      return (
+        <button
+          key={item}
+          onClick={() => onPageChange(item as number)}
+          className={`mx-1 px-3 py-1 border rounded-full ${
+            currentPage === item
+              ? "bg-customRed text-white"
+              : "bg-white text-[#101010]"
+          }`}
+        >
+          {item}
+        </button>
+      );
+    });
+  };
+
+  return (
+    <div className="flex justify-center mt-4">
+      <button
+        onClick={handlePrevClick}
+        className="mx-1 px-3 py-1 border rounded-full bg-white text-[#101010] disabled:opacity-50"
+        disabled={currentPage === 1}
+      >
+        <IoIosArrowBack />
+      </button>
+      {renderPageNumbers()}
       <button
         onClick={handleNextClick}
-        className="mx-1 px-3 py-1 border rounded-full bg-white text-[#101010]"
+        className="mx-1 px-3 py-1 border rounded-full bg-white text-[#101010] disabled:opacity-50"
         disabled={currentPage === totalPages}
       >
         <IoIosArrowForward />
@@ -70,4 +114,4 @@ const Pagination = ({
   );
 };
 
-export default Pagination;
+export default Pagination;  

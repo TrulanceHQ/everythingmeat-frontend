@@ -22,34 +22,40 @@ const TotalBuyers = ({ onClick, handleSectionClick }: Props) => {
 
   const handleSelectedSeller = (clickedId: string) => {
     setBuyerId(clickedId);
+    console.log(clickedId)
     setActiveComponent("userProfile");
   };
 
   const renderComponent = () => {
     switch (activeComponent) {
       case "Default":
-        return <TotalBuyersDefault clickId={handleSelectedSeller} />;
+        return <TotalBuyersDefault clickId={handleSelectedSeller} handleSectionClick={handleSectionClick} />;
       case "userProfile":
         return (
-          <BuyerProfileDetailsPage onClick={onBackClick} sellerId={buyerId} />
+          <BuyerProfileDetailsPage onClick={onBackClick} buyerId={buyerId} />
         );
     }
   };
 
   return (
-    <div className="">
+    <div className=" ">
       <div>
         <SectionHero pageTitle={"Total Buyers"} />
       </div>
-      <div className="mx-10">
+      <div className="mx-4 md:mx-10">
         <BackToDashboard onClick={onClick} />
       </div>
-      <div className="flex flex-row justify-between mx-10">
-        <DefaultLeft
-          onSectionClick={handleSectionClick}
-          activeComponent="totalBuyers"
-        />
-        {renderComponent()}
+
+      <div className="flex flex-col md:flex-row justify-center md:justify-between mx-2 md:mx-10 md:space-x-8">
+        <div className="hidden md:block md:w-[25%]">
+          <DefaultLeft
+            onSectionClick={handleSectionClick}
+            activeComponent="totalBuyers"
+          />
+        </div>
+        <div className="flex flex-col md:w-[72%] my-4 space-y-4">
+          {renderComponent()}
+        </div>
       </div>
     </div>
   );

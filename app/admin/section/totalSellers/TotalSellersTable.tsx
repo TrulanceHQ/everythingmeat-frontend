@@ -27,10 +27,10 @@ const TotalSellersTable = ({ clickId }: Props) => {
 
   return (
     <div className="my-4">
-      <Table className="min-w-full">
+      <Table className="">
         <TableHeader>
           <TableRow>
-            <TableHead className="py-3 px-6 text-left">First Name</TableHead>
+            <TableHead className="py-3  text-left">First Name</TableHead>
             <TableHead className="py-3 px-6 text-left">Last Name</TableHead>
             <TableHead className="py-3 px-6 text-left">Email</TableHead>
             <TableHead className="py-3 px-6 text-left">Stocks Sold</TableHead>
@@ -39,8 +39,11 @@ const TotalSellersTable = ({ clickId }: Props) => {
         </TableHeader>
         <TableBody>
           {currentItems.map((item, index) => (
-            <TableRow key={index}>
-              <TableCell className="py-3 px-6 text-left whitespace-nowrap">
+            <TableRow
+              key={index}
+              className={`${!item.active ? "bg-gray-200" : ""}`}
+            >
+              <TableCell className="py-3 text-left whitespace-nowrap">
                 {item.firstName}
               </TableCell>
               <TableCell className="py-3 px-6 text-left">

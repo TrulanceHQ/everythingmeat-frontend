@@ -22,26 +22,28 @@ const TotalSalesTable = () => {
 
   return (
     <div className="my-4">
-      <Table>
-        <TableHeader>
-          <TableRow className="flex justify-between">
-            <TableHead>Product ID</TableHead>
-            <TableHead>Product Name</TableHead>
-            <TableHead>Price</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
-          {currentItems.map((item, index) => (
-            <TableRow key={index} className="flex justify-between">
-              <TableCell className="font-normal text-base">
-                {item.productId}
-              </TableCell>
-              <TableCell>{item.productName}</TableCell>
-              <TableCell>{item.price}</TableCell>
+      <div className="overflow-x-auto">
+        <Table className="min-w-full">
+          <TableHeader>
+            <TableRow>
+              <TableHead className="py-3 px-6 text-left">Product ID</TableHead>
+              <TableHead className="py-3 px-6 text-left">Product Name</TableHead>
+              <TableHead className="py-3 px-6 text-left">Price</TableHead>
             </TableRow>
-          ))}
-        </TableBody>
-      </Table>
+          </TableHeader>
+          <TableBody>
+            {currentItems.map((item, index) => (
+              <TableRow key={index}>
+                <TableCell className="py-3 px-6 text-left whitespace-nowrap">
+                  {item.productId}
+                </TableCell>
+                <TableCell className="py-3 px-6 text-left">{item.productName}</TableCell>
+                <TableCell className="py-3 px-6 text-left">{item.price}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
 
       <Pagination
         currentPage={currentPage}

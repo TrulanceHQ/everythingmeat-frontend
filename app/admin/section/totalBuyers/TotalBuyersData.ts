@@ -6,6 +6,12 @@ export const TotalBuyersData = [
       email: "john.doe@example.com",
       orders: 50,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: false
     },
     {
       id: "2",
@@ -14,6 +20,12 @@ export const TotalBuyersData = [
       email: "jane.smith@example.com",
       orders: 3,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "3",
@@ -22,6 +34,12 @@ export const TotalBuyersData = [
       email: "michael.johnson@example.com",
       orders: 20,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "4",
@@ -30,6 +48,12 @@ export const TotalBuyersData = [
       email: "emily.davis@example.com",
       orders: 12,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "5",
@@ -38,6 +62,12 @@ export const TotalBuyersData = [
       email: "chris.brown@example.com",
       orders: 9,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: false
     },
     {
       id: "6",
@@ -46,6 +76,12 @@ export const TotalBuyersData = [
       email: "laura.wilson@example.com",
       orders: 75,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "7",
@@ -54,6 +90,12 @@ export const TotalBuyersData = [
       email: "david.martinez@example.com",
       orders: 25,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "8",
@@ -62,6 +104,12 @@ export const TotalBuyersData = [
       email: "sophia.anderson@example.com",
       orders: 10,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "9",
@@ -70,6 +118,12 @@ export const TotalBuyersData = [
       email: "daniel.thomas@example.com",
       orders: 40,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: false
     },
     {
       id: "10",
@@ -78,6 +132,12 @@ export const TotalBuyersData = [
       email: "olivia.taylor@example.com",
       orders: 22,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "11",
@@ -86,6 +146,12 @@ export const TotalBuyersData = [
       email: "james.moore@example.com",
       orders: 18,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "12",
@@ -94,6 +160,12 @@ export const TotalBuyersData = [
       email: "isabella.jackson@example.com",
       orders: 45,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "13",
@@ -102,6 +174,12 @@ export const TotalBuyersData = [
       email: "ethan.white@example.com",
       orders: 38,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "14",
@@ -110,6 +188,12 @@ export const TotalBuyersData = [
       email: "mia.harris@example.com",
       orders: 19,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
     {
       id: "15",
@@ -118,6 +202,12 @@ export const TotalBuyersData = [
       email: "benjamin.martin@example.com",
       orders: 32,
       registered: "08.08.2024",
+      phoneNumber: "57679843875723409",
+      optionalPhoneNumber: "",
+      userType: "Buyer",
+      gender: "Male",
+      buyerImage: "/admin_profile.png",
+      active: true
     },
   ];
   

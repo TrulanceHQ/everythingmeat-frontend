@@ -69,7 +69,7 @@ const AdminDefault = ({ handleCardClick }: Props) => {
         <div className="bg-white my-10 rounded-2xl">
           <div className="px-10 py-5 flex flex-col lg:flex-row justify-between">
             <h3 className="font-bold py-2 text-2xl">Payment Request</h3>
-            <FilterComponent items={DropdownItems} />
+            <FilterComponent items={DropdownItems} className="flex flex-col md:flex-row justify-left space-y-3 space-x-0 "/>
           </div>
           <DashboardTable DashboardTableData={DashboardTableData} />
         </div>
