@@ -15,19 +15,20 @@ const SellerProfileDetailsPage = ({ onClick, sellerId }: Props) => {
     : null;
 
   return (
-    <div className="w-full px-10 py-8">
+    <div className="w-full px-10 py-4">
       <div className="flex flex-col">
         <div className="flex flex-row justify-start">
-          <div className="flex flex-row justify-between">
+          <div>
             {selectedSeller && (
               <Image src={selectedSeller.sellerImage} alt={""} width={150} height={200}></Image>
             )}
-            <BackToDashboard onClick={onClick} />
           </div>
         </div>
         {/* Form  */}
         <SellerInfoForm sellerInfo={selectedSeller ? [selectedSeller] : []} />
+        <BackToDashboard onClick={onClick} />
       </div>
+      
     </div>
   );
 };

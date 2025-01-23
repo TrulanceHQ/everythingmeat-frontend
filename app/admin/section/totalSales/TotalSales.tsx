@@ -41,7 +41,7 @@ const TotalSales = ({ onClick, handleSectionClick }: Props) => {
           />
         </div>
         <div className="flex flex-col md:w-[72%] my-4 space-y-4">
-          <div className="flex flex-row justify-between">
+          <div className="flex flex-row justify-between mx-4 md:mx-0">
             <div>
               <TitleHeaders Title={"Total Sales"} Text={"List of all sales"} />
             </div>
@@ -55,10 +55,10 @@ const TotalSales = ({ onClick, handleSectionClick }: Props) => {
               />
             </div>
           </div>
-          <div className="block md:hidden">
+          <div className="block md:hidden mx-4">
             <FilterComponent items={DropdownItems} />
           </div>
-          <div className="my-3">
+          <div className="my-3 md:mx-0">
             <TotalSalesTable />
           </div>
         </div>

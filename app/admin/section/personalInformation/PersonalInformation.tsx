@@ -11,19 +11,30 @@ type Props = {
 
 const PersonalInformation = ({ onClick, handleSectionClick }: Props) => {
   return (
-    <div className="">
+    <div>
       <div>
         <SectionHero pageTitle={"My Account"} />
       </div>
-      <div className="mx-10">
-        <BackToDashboard onClick={onClick} />
+      <div className="mx-4 md:mx-10 flex flex-row justify-between items-center">
+        <div>
+          <BackToDashboard onClick={onClick} />
+        </div>
+        <div className="block md:hidden">
+          <DefaultLeft
+            onSectionClick={handleSectionClick}
+            activeComponent="personalInformation"
+          />
+        </div>
       </div>
-      <div className="flex flex-row justify-between mx-10">
-        <DefaultLeft
-          onSectionClick={handleSectionClick}
-          activeComponent="personalInformation"
-        />
-        <div className="flex flex-col w-[72%] my-4">
+
+      <div className="flex flex-row justify-center md:justify-between mx-2 md:mx-10 md:space-x-8">
+        <div className="hidden md:block md:w-[25%]">
+          <DefaultLeft
+            onSectionClick={handleSectionClick}
+            activeComponent="personalInformation"
+          />
+        </div>
+        <div className="flex flex-col w-[68%] my-4">
           <PersonalInfoForm />
         </div>
       </div>

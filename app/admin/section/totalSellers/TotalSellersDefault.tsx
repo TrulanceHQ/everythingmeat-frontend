@@ -21,7 +21,7 @@ const TotalSellersDefault = ({ clickId, handleSectionClick }: Props) => {
     { label: "Price", onClick: handlePriceClick },
   ];
   return (
-    <div className="flex flex-col my-4 space-y-4">
+    <div className="flex flex-col space-y-4">
       {/* Tablet and Desktop  */}
       <div className=" flex-row justify-between hidden md:flex">
         <div>
@@ -33,7 +33,7 @@ const TotalSellersDefault = ({ clickId, handleSectionClick }: Props) => {
       </div>
 
       {/* Mobile  */}
-      <div className="flex flex-col md:hidden">
+      <div className="flex flex-col md:hidden justify-between space-y-4 mx-4">
         <div className="flex flex-row justify-between">
           <TitleHeaders Title={"Total Sellers"} Text={"List of all sellers"} />
           <DefaultLeft
@@ -45,7 +45,7 @@ const TotalSellersDefault = ({ clickId, handleSectionClick }: Props) => {
         <FilterComponent items={DropdownItems} />
       </div>
 
-      <div className="my-3">
+      <div className="my-3 mx-4 md:mx-0">
         <TotalSellersTable clickId={clickId} />
       </div>
     </div>

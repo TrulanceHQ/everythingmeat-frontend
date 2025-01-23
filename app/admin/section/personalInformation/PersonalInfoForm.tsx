@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ErrorAlert from "@/app/signup/components/ErrorAlert";
 import { Button } from "@/components/ui/button";
 import {
@@ -93,8 +94,8 @@ const PersonalInfoForm = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4 my-8">
           {/* First name and Last name  */}
-          <div className="flex space-x-4">
-            <div className="w-1/2">
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+            <div className="md:w-1/2">
               <FormField
                 control={form.control}
                 name="firstName"
@@ -119,7 +120,7 @@ const PersonalInfoForm = () => {
                 )}
               />
             </div>
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <FormField
                 control={form.control}
                 name="lastName"
@@ -172,8 +173,8 @@ const PersonalInfoForm = () => {
             )}
           />
           {/* Phone number and opotional phone number  */}
-          <div className="flex space-x-4">
-            <div className="w-1/2">
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+            <div className="md:w-1/2">
               <FormField
                 control={form.control}
                 name="phoneNumber"
@@ -199,7 +200,7 @@ const PersonalInfoForm = () => {
               />
             </div>
 
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               {" "}
               <FormField
                 control={form.control}
@@ -229,8 +230,8 @@ const PersonalInfoForm = () => {
           </div>
 
           {/* User type and gender  */}
-          <div className="flex space-x-4">
-            <div className="w-1/2">
+          <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+            <div className="md:w-1/2">
               <FormField
                 control={form.control}
                 name="userType"
@@ -256,7 +257,7 @@ const PersonalInfoForm = () => {
               />
             </div>
 
-            <div className="w-1/2">
+            <div className="md:w-1/2">
               <FormField
                 control={form.control}
                 name="gender"
@@ -293,7 +294,7 @@ const PersonalInfoForm = () => {
             )}
             <Button
               type="submit"
-              className="w-1/4 bg-customRed text-base text-center font-bold py-5 mt-6"
+              className="md:w-1/4 bg-customRed text-base text-center font-bold py-5 mt-6"
             >
               {loading ? "Updating..." : "Update Now"}
             </Button>

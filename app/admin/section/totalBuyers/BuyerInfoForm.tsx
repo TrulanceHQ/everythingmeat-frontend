@@ -27,13 +27,13 @@ type Props = {
 const BuyerInfoForm = ({ buyerInfo }: Props) => {
     
   return (
-    <div className="my-8 w-full">
+    <div className="mb-0 mt-8 w-full">
       {buyerInfo.map((info, index) => (
         <div key={index} className="mb-4 w-full">
           <div className="flex flex-col w-full space-y-6">
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
               {/* First Name */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`firstName-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -56,7 +56,7 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
                 </div>
               </div>
               {/* Last Name */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`lastName-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -103,9 +103,9 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
               </div>
             </div>
             {/* Phone Number  */}
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
               {/* Phone Number */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`phoneNumber-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -128,7 +128,7 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
                 </div>
               </div>
               {/* Phone Number (Optional) */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`optionalPhoneNumber-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -152,9 +152,9 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
               </div>
             </div>
             {/* UserType and Gender  */}
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
               {/* User Type */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`userType-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -177,7 +177,7 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
                 </div>
               </div>
               {/* Gender */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`gender-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -201,9 +201,9 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
               </div>
             </div>
             {/* Orders and Register */}
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
               {/* Orders */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`orders-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -226,7 +226,7 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
                 </div>
               </div>
               {/* Registered */}
-              <div className="w-1/2">
+              <div className="md:w-1/2">
                 <label
                   htmlFor={`registered-${index}`}
                   className="block text-base font-medium text-[#101010] py-1"
@@ -250,10 +250,10 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
               </div>
             </div>
             {/* Deactivate and Delete Buttons */}
-            <div className="flex space-x-4">
+            <div className="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
               <button
                 type="button"
-                className={`w-1/3 py-2 px-4 border  text-sm font-medium rounded-md  bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 ${
+                className={`md:w-1/3 py-2 px-4 border  text-sm font-medium rounded-md  bg-white focus:outline-none focus:ring-2 focus:ring-offset-2 ${
                   info.active
                     ? " text-customRed border-customRed hover:bg-red-300 hover:text-white hover:border-red-50 focus:ring-red-500"
                     : "text-green-600 border-green-600 hover:bg-green-300  hover:text-white focus:ring-green-500 hover:border-green-300"
@@ -263,7 +263,7 @@ const BuyerInfoForm = ({ buyerInfo }: Props) => {
               </button>
               <button
                 type="button"
-                className="w-1/3 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-customRed hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
+                className="md:w-1/3 py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-customRed hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"
               >
                 Delete Account
               </button>

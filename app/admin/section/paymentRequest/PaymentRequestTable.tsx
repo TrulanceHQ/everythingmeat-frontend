@@ -36,7 +36,7 @@ import { paymentRequestData } from "./PaymentRequestData";
     };
   
     return (
-      <div className="my-6">
+      <div className="my-2">
         <Table>
           <TableHeader>
             <TableRow className="min-w-full">

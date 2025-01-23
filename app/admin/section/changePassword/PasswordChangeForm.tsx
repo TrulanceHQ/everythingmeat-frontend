@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import ErrorAlert from "@/app/signup/components/ErrorAlert";
 import { Button } from "@/components/ui/button";
 import {
@@ -170,7 +171,7 @@ const PasswordChangeForm = () => {
             )}
             <Button
               type="submit"
-              className="w-1/3 bg-customRed text-base text-center font-bold py-5 mt-6"
+              className="md:w-1/3 bg-customRed text-base text-center font-bold py-5 mt-6"
             >
               {loading ? "Updating password ..." : "Change password"}
             </Button>
