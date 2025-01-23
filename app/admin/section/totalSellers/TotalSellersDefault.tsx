@@ -1,12 +1,15 @@
 import React from "react";
 import TitleHeaders from "../components/TitleHeaders";
 import TotalSellersTable from "./TotalSellersTable";
+import FilterComponent from "../../components/FilterComponent";
+import DefaultLeft from "../../components/DefaultLeft";
 
 type Props = {
-    clickId: (itemID: string) => void;
-  };
+  clickId: (itemID: string) => void;
+  handleSectionClick: (componentName: string) => void;
+};
 
-const TotalSellersDefault = ({ clickId }: Props) => {
+const TotalSellersDefault = ({ clickId, handleSectionClick }: Props) => {
   const handleProductIdClick = () => {};
 
   const handleProductNameClick = () => {};
@@ -18,14 +21,32 @@ const TotalSellersDefault = ({ clickId }: Props) => {
     { label: "Price", onClick: handlePriceClick },
   ];
   return (
-    <div className="flex flex-col w-[72%] my-4">
-      <TitleHeaders
-        Title={"Total Sellers"}
-        Text={"List of all Sellers"}
-        items={DropdownItems}
-      />
+    <div className="flex flex-col my-4 space-y-4">
+      {/* Tablet and Desktop  */}
+      <div className=" flex-row justify-between hidden md:flex">
+        <div>
+          <TitleHeaders Title={"Total Sellers"} Text={"List of all sellers"} />
+        </div>
+        <div>
+          <FilterComponent items={DropdownItems} />
+        </div>
+      </div>
+
+      {/* Mobile  */}
+      <div className="flex flex-col md:hidden">
+        <div className="flex flex-row justify-between">
+          <TitleHeaders Title={"Total Sellers"} Text={"List of all sellers"} />
+          <DefaultLeft
+            onSectionClick={handleSectionClick}
+            activeComponent="totalSellers"
+          />
+        </div>
+
+        <FilterComponent items={DropdownItems} />
+      </div>
+
       <div className="my-3">
-        <TotalSellersTable clickId={clickId}/>
+        <TotalSellersTable clickId={clickId} />
       </div>
     </div>
   );

@@ -27,7 +27,7 @@ const TotalSellersTable = ({ clickId }: Props) => {
 
   return (
     <div className="my-4">
-      <Table className="min-w-full">
+      <Table className="">
         <TableHeader>
           <TableRow>
             <TableHead className="py-3  text-left">First Name</TableHead>
