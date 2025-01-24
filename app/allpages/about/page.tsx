@@ -4,11 +4,11 @@ import AboutTeam from "./components/AboutTeam";
 
 const AboutPage = () => {
   return (
-    <>
+    <div>
     <AboutHero />
     <AboutQuestion />
     <AboutTeam />
-    </>
+    </div>
   );
 };
 
