@@ -1,5 +1,4 @@
-// import AboutHero from "./components/AboutHero";
-import AboutHero from "./components/aboutHero";
+import AboutHero from "./components/AboutHero";
 import AboutQuestion from "./components/AboutQuestion";
 import AboutTeam from "./components/AboutTeam";
 
