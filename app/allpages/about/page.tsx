@@ -1,15 +1,15 @@
-import AboutHero from "./components/AboutHero";
-import AboutQuestion from "./components/AboutQuestion";
-import AboutTeam from "./components/AboutTeam";
+// import AboutHero from "./components/AboutHero";
+// import AboutQuestion from "./components/AboutQuestion";
+// import AboutTeam from "./components/AboutTeam";
 
-const AboutPage = () => {
-  return (
-    <div>
-    <AboutHero />
-    <AboutQuestion />
-    <AboutTeam />
-    </div>
-  );
-};
+// const AboutPage = () => {
+//   return (
+//     <>
+//     <AboutHero />
+//     <AboutQuestion />
+//     <AboutTeam />
+//     </>
+//   );
+// };
 
-export default AboutPage;
+// export default AboutPage;
