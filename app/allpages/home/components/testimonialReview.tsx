@@ -107,7 +107,7 @@ const TestimonialReview = () => {
   }, [slides.length]);
 
   return (
-    <div className="bg-gray-100 py-12 md:px-6 px-[2px]">
+    <div className="bg-customGray py-12 md:px-6 px-[2px]">
       <h1 className="md:text-3xl text-2xl font-bold text-center mb-2">
         Reviews From Our Customers
       </h1>
@@ -164,7 +164,7 @@ const TestimonialReview = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="md:ml-12 ml-8 bg-gray-100 md:p-2 p-1 rounded-full">
+                    <div className="md:ml-12 ml-8 bg-customGray md:p-2 p-1 rounded-full">
                       <RiDoubleQuotesL className="text-customRed md:text-3xl text-2xl" />
                     </div>
                   </CardHeader>

@@ -8,6 +8,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { RiInstagramFill } from "react-icons/ri";
+import { TfiHeart } from "react-icons/tfi";
 import { useRouter, usePathname } from "next/navigation";
 
 const AppNavbar = () => {
@@ -17,7 +18,7 @@ const AppNavbar = () => {
   const navLinks = [
     { label: "Home", path: "/" },
     { label: "About Us", path: "/allpages/about" },
-    { label: "Stocks", path: "/stocks" },
+    { label: "Stocks", path: "/allpages/stocks" },
     { label: "Contact Us", path: "/allpages/contact" },
   ];
 
@@ -77,7 +78,12 @@ const AppNavbar = () => {
               {label}
             </Navbar.Link>
           ))}
-          <div className="flex justify-center items-center mt-4 md:hidden space-x-20">
+          <div className="flex justify-center items-center mt-4 md:hidden space-x-10">
+            {pathname === "/allpages/stocks" && (
+              <Link href="#" className="text-customRed">
+                <TfiHeart size={30} />
+              </Link>
+            )}
             <Link href="#" className="text-customRed">
               <HiOutlineShoppingBag size={30} />
             </Link>
@@ -89,7 +95,12 @@ const AppNavbar = () => {
         </Navbar.Collapse>
 
         {/* Right Section for Desktop */}
-        <div className="hidden md:flex items-center space-x-4">
+        <div className="hidden md:flex items-center space-x-2 lg:space-x-5 xl:space-x-10">
+          {pathname === "/allpages/stocks" && (
+            <Link href="#" className="text-customRed">
+              <TfiHeart size={30} />
+            </Link>
+          )}
           <Link href="#" className="text-customRed">
             <HiOutlineShoppingBag size={30} />
           </Link>

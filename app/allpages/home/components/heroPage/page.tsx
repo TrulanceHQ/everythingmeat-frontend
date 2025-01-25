@@ -19,7 +19,7 @@ const HeroPage = () => {
   };
 
   return (
-    <section className="flex flex-col lg:flex-row items-center bg-gray-200 py-12 px-6 lg:px-16">
+    <section className="flex flex-col lg:flex-row items-center bg-customGray py-12 px-6 lg:px-16">
       {/* Left Section */}
       <div className="lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0 md:space-y-5 space-y-4 text-sm md:text-base lg:text-lg">
         {/* Arrow Icon */}

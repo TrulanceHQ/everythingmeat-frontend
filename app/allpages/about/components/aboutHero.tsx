@@ -18,7 +18,7 @@ const AboutHero = () => {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-100 pt-5 min-h-screen relative">
+    <div className="bg-customGray pt-5 min-h-screen relative">
       {/* Back Button */}
       <Button
         onClick={() => router.push("/")}

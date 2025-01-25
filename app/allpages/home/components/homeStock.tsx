@@ -66,7 +66,7 @@ const HomeStock = () => {
   };
 
   return (
-    <section className="px-4 sm:px-10 md:px-20 py-10 sm:py-20 bg-gray-100">
+    <section className="px-4 sm:px-10 md:px-20 py-10 sm:py-20 bg-customGray">
       {/* Text Header Start*/}
       <div className="text-center">
         <h2 className="md:text-3xl text-2xl font-bold mb-2">Most Popular Stocks</h2>
