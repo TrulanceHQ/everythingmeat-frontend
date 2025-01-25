@@ -18,11 +18,13 @@ import { Eye, EyeOff, Lock, Mail } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import CustomCheckbox from "@/components/ui/customCheckbox";
+import { useLogin } from "../utils/login";
+import ErrorAlert from "@/app/signup/components/ErrorAlert";
 
 // type Props = {}
 
 const formSchema = z.object({
-  username: z.string().min(2).max(50),
+  username: z.string().min(2, "Enter a valid email address"),
   password: z.string(),
   rememberMe: z.boolean(),
 });
@@ -37,8 +39,19 @@ const LoginForm = () => {
     },
   });
 
+  const { userLogin, loading, error, setError } = useLogin();
+
+  const handleDismiss = () => {
+    setError(false);
+  };
+
   function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
+    const userCredentails = {
+      emailAddress: values.username,
+      password: values.password,
+    };
+    userLogin(userCredentails);
+
   }
 
   const [showPassword, setShowPassword] = useState(false);
@@ -127,11 +140,17 @@ const LoginForm = () => {
           />
         </div>
         <div className="flex flex-col space-y-4">
+          {error && (
+            <ErrorAlert
+              errorMessage={"Invalid Credentials"}
+              onDismiss={handleDismiss}
+            />
+          )}
           <Button
             type="submit"
-            className="w-full bg-customRed text-base font-bold py-5"
+            className="w-full bg-customRed text-base text-center font-bold py-5"
           >
-            Sign In
+            {loading ? "Signing in..." : "Sign In"}
           </Button>
           <div className="relative">
             <Image
