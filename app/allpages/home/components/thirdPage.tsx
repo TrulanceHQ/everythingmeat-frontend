@@ -27,7 +27,7 @@ const steps = [
 
 const HomeThird = () => {
   return (
-    <section className="bg-gray-100 py-12 px-6 xl:px-16">
+    <section className="bg-customGray py-12 px-6 xl:px-16">
       {/* Title and Subtitle */}
       <div className="text-center mb-12">
         <h2 className="md:text-3xl text-2xl font-bold">How It Works</h2>

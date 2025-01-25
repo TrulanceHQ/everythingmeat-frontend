@@ -4,7 +4,7 @@ import GetForm from "./components/getForm";
 
 const ContactPage = () => {
   return (
-    <div className="bg-gray-100 pt-2 min-h-screen relative">
+    <div className="bg-customGray pt-2 min-h-screen relative">
       {/* Title Section */}
       <div className="text-center mt-20 mb-20">
         <h1 className="md:text-3xl text-2xl font-bold text-black mb-3">
@@ -35,6 +35,7 @@ const ContactPage = () => {
       </div>
       {/* Component */}
       <GetForm />
+      <div className="h-20 w-full bg-customGray"></div>
     </div>
   );
 };

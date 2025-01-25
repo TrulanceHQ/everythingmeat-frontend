@@ -8,6 +8,7 @@ const AboutPage = () => {
     <AboutHero />
     <AboutQuestion />
     <AboutTeam />
+    <div className="h-20 w-full bg-customGray"></div>
     </>
   );
 };
