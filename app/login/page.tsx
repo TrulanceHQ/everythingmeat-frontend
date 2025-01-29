@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const page = () => {
   return (
-    <div className="bg-[#F2F2F2] h-screen flex flex-col justify-center items-center">
+    <div className="bg-[#F2F2F2] py-4 lg:h-screen flex flex-col justify-center items-center">
       <div className="relative">
         <Image
           src={"/dotframe.png"}

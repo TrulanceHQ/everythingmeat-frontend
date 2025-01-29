@@ -1,15 +1,15 @@
 
 export const CardData = [
   {
-    cardLink: "Card Title",
+    cardLink: "totalSales",
     iconBGColor: "bg-[rgba(175,2,2,0.2)]",
     iconLink: "/sale-tag.png",
     title: "Total Sales",
-    amount: "1,150,000",
+    amount: "5,150,000",
     rate: 7.8,
   },
   {
-    cardLink: "Card Title",
+    cardLink: "totalCommission",
     iconBGColor: "bg-[#D9FFE9]",
     iconLink: "/cash-withdrawal.png",
     title: "Total Commission",
@@ -17,7 +17,7 @@ export const CardData = [
     rate: 1.5,
   },
   {
-    cardLink: "Card Title",
+    cardLink: "totalSellers",
     iconBGColor: "bg-[#0099CC33]",
     iconLink: "/seller.png",
     title: "Total Sellers",
@@ -26,7 +26,7 @@ export const CardData = [
     showNairaSymbol : false,
   },
   {
-    cardLink: "Card Title",
+    cardLink: "totalBuyers",
     iconBGColor: "bg-[#FF880040]",
     iconLink: "/customer.png",
     title: "Total Buyers",

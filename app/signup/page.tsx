@@ -1,13 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import Image from "next/image";
-import SignInForm from "./components/SignInForm";
+import SignUpForm from "./components/SignUpForm";
 
 // type Props = {}
 
 const page = () => {
   return (
-    <div className="bg-[#F2F2F2] h-screen flex flex-col justify-center items-center">
+    <div className="bg-[#F2F2F2] py-10 flex flex-col justify-center items-center">
       <div className="relative">
         <Image
           src={"/dotframe.png"}
@@ -31,7 +31,7 @@ const page = () => {
             <hr className="w-[4rem] mt-2 h-1 bg-customRed border-none" />
           </div>
           <div className="py-4">
-            <SignInForm />
+            <SignUpForm />
           </div>
         </div>
 
