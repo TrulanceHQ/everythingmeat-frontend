@@ -96,13 +96,13 @@ const HeroPage = () => {
         {/* Navigation Buttons */}
         <div className="flex lg:justify-start space-x-4 sm:space-x-6 mt-6 lg:ps-11 justify-center">
           <button
-            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-[#FFBA35] hover:text-black"
+            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-[#FFBA35] hover:text-black duration-200"
             onClick={handleScrollLeft}
           >
             <FaArrowLeft />
           </button>
           <button
-            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-[#FFBA35] hover:text-black"
+            className="bg-customRed text-white md:p-5 p-3 rounded-full hover:bg-[#FFBA35] hover:text-black duration-200"
             onClick={handleScrollRight}
           >
             <FaArrowRight />

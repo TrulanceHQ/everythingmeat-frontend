@@ -38,7 +38,7 @@ const HeroData = () => {
               <p className="md:text-base font-normal">{animal.stocks} Stocks</p>
             </div>
             <button
-              className="bg-customRed hover:bg-[#FFBA35] text-white hover:text-black lg:p-5 p-3 rounded-full"
+              className="bg-customRed hover:bg-[#FFBA35] duration-200 text-white hover:text-black lg:p-5 p-3 rounded-full"
               onClick={() => handleCardClick(animal.name)}
             >
               <PiArrowUpRightBold className="lg:text-3xl md:text-2xl text-lg" />
