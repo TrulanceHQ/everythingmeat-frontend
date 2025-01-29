@@ -22,7 +22,7 @@ const ProductImages: React.FC<ProductImagesProps> = ({ selectedImage, fade, hand
         {/* Zoom Icon */}
         <MdOutlineZoomOutMap
           size={30}
-          className="absolute top-8 xl:right-8 lg:right-1 md:right-14 right-10 text-black bg-white rounded-full p-1 cursor-pointer shadow-md md:w-[30] md:h-[30] w-[20] h-[20]"
+          className="absolute top-8 xl:right-5 lg:right-1 md:right-14 right-10 text-gray-700 bg-white rounded-full p-1 cursor-pointer shadow-md md:w-[30] md:h-[30] w-[20] h-[20]"
           onClick={handleZoomClick}
         />
       </div>

@@ -28,7 +28,7 @@ const FifthPage = () => {
         </p>
         <div className="w-14 border-b-4 border-customRed"></div>
         <div>
-          <Button className="flex items-center justify-center gap-2 md:p-6 p-3 text-white bg-customRed hover:bg-customRed rounded-lg font-bold md:mt-10 mt-5 md:text-base text-sm">
+          <Button className="flex items-center justify-center gap-2 md:p-6 p-3 bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 rounded-lg font-bold md:mt-10 mt-5 md:text-base text-sm">
             Explore More <GoArrowRight className="text-lg" />
           </Button>
         </div>
