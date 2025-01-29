@@ -23,12 +23,12 @@ const AppNavbar = () => {
     { label: "Contact Us", path: "/allpages/contact" },
   ];
 
-  const socialLinks = [
-    { icon: FaFacebookF, href: "#" },
-    { icon: IoLogoWhatsapp, href: "#" },
-    { icon: RiInstagramFill, href: "#" },
-    { icon: FaXTwitter, href: "#" },
-  ];
+    const socialLinks = [
+        {icon: FaFacebookF, href: "#"},
+        {icon: IoLogoWhatsapp, href: "#"},
+        {icon: RiInstagramFill, href: "#"},
+        {icon: FaXTwitter, href: "#"},
+    ];
 
   return (
     <header className="bg-customRed text-white z-50">
@@ -59,8 +59,8 @@ const AppNavbar = () => {
           />
         </Navbar.Brand>
 
-        {/* Hamburger Menu */}
-        <Navbar.Toggle />
+                {/* Hamburger Menu */}
+                <Navbar.Toggle />
 
         {/* Navigation Links and Icon and Button */}
         <Navbar.Collapse className="text-center">
