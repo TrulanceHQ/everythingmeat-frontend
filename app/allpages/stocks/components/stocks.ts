@@ -110,7 +110,7 @@ const stocks = [
   {
     id: "173G5G",
     title: "Live Pig",
-    image: "/stocksImages/live-pig.jpg",
+    image: "/stocksImages/live-pig.png",
     price: 60000,
     slotsOut: 8,
     slotsAvailable: 12,
@@ -128,7 +128,7 @@ const stocks = [
   {
     id: "19263HU",
     title: "Large White Pig",
-    image: "/stocksImages/large-white-pig.jpg",
+    image: "/stocksImages/large-white-pig.png",
     price: 95000,
     slotsOut: 8,
     slotsAvailable: 12,
@@ -137,7 +137,7 @@ const stocks = [
   {
     id: "12962PW",
     title: "Black & White Pig",
-    image: "/stocksImages/black-white-pig.jpg",
+    image: "/stocksImages/black-white-pig.png",
     price: 58500,
     slotsOut: 5,
     slotsAvailable: 15,

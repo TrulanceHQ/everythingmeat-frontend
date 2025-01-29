@@ -77,7 +77,7 @@ const GetForm = () => {
             />
           </div>
 
-          <Button type="submit" className="bg-customRed text-white md:px-28 px-20 py-6 hover:bg-customRed">
+          <Button type="submit" className="bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 md:px-28 px-20 py-6 rounded-lg">
             Send
           </Button>
         </form>

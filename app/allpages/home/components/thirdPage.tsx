@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { IoMdPlay } from "react-icons/io";
-import { Card } from "flowbite-react"; // Importing Flowbite Card component
+import { Card } from "flowbite-react";
 
 const steps = [
   {

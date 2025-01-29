@@ -35,7 +35,7 @@ const ContactPage = () => {
       </div>
       {/* Component */}
       <GetForm />
-      <div className="h-20 w-full bg-customGray"></div>
+      <div className="h-20"></div>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import {
   Card,
   CardHeader,
@@ -10,7 +11,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 import { MdOutlineZoomOutMap } from "react-icons/md";
-import { IoChevronBack, IoCloseOutline, IoChevronForward, IoChevronBackOutline } from "react-icons/io5";
+import { IoCloseOutline, IoChevronForward, IoChevronBackOutline } from "react-icons/io5";
+import Image from "next/image";
 
 interface StocksCardProps {
   paginatedStocks: any[];
@@ -26,8 +28,19 @@ interface StocksCardProps {
 }
 
 const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks, currentPage, itemsPerPage, handlePageChange, handleRemoveCategory, handleRemovePriceRange, handleClearFilters, selectedCategory, priceRange }) => {
+  const router = useRouter();
+
+  const handleBookNow = (productId: string) => {
+    router.push(`/allpages/stocks/components/productDetails?productId=${productId}`);
+  };
+
+  const handlePageChangeAndScroll = (page: number) => {
+    handlePageChange(page);
+    document.getElementById('stocks-card-container')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div className="w-full lg:w-3/4 p-4">
+    <div id="stocks-card-container" className="w-full lg:w-3/4 p-4">
       {/* Showing Number of Results */}
       <div className="mb-4 text-sm">
         Showing 1-{paginatedStocks.length} of {filteredStocks.length} results
@@ -65,13 +78,15 @@ const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks
         {paginatedStocks.map((stock, index) => (
           <Card
             key={stock.id}
-            className="w-full max-w-[300px] max-h-[530px] border-none bg-[#F2F2F2]"
+            className="w-full max-w-[300px] max-h-[530px] border-none bg-[#F2F2F2] mx-auto lg:mx-0"
           >
             <CardHeader>
               <div className="relative">
-                <img
+                <Image
                   src={stock.image}
                   alt={stock.title}
+                  width={300}
+                  height={208}
                   className="rounded-lg object-cover w-full h-52"
                 />
                 <div className="absolute top-5 right-2 flex flex-col space-y-2">
@@ -90,6 +105,7 @@ const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks
                 </div>
               </div>
             </CardHeader>
+            {/* Card Details Start */}
             <CardContent>
               <p className="text-sm text-gray-500">
                 Product ID: {stock.id}
@@ -114,8 +130,12 @@ const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks
                 <span className="font-bold">{stock.slotsAvailable}</span>
               </p>
             </CardContent>
+            {/* Card Details End */}
             <CardFooter>
-              <Button className="bg-customRed text-white py-4 px-2 rounded-lg w-full hover:bg-customRed">
+              <Button
+                className="bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 py-5 px-2 rounded-lg w-full"
+                onClick={() => handleBookNow(stock.id)}
+              >
                 Book Now
               </Button>
             </CardFooter>
@@ -126,7 +146,7 @@ const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks
       <div className="flex justify-center mt-6">
         <div className="flex items-center space-x-4">
           <button
-            onClick={() => handlePageChange(currentPage - 1)}
+            onClick={() => handlePageChangeAndScroll(currentPage - 1)}
             disabled={currentPage === 1}
             className="p-2"
           >
@@ -135,14 +155,14 @@ const StocksCard: React.FC<StocksCardProps> = ({ paginatedStocks, filteredStocks
           {[...Array(Math.ceil(filteredStocks.length / itemsPerPage)).keys()].map((page) => (
             <button
               key={page + 1}
-              onClick={() => handlePageChange(page + 1)}
+              onClick={() => handlePageChangeAndScroll(page + 1)}
               className={`py-2 px-4 text-xl font-medium ${currentPage === page + 1 ? "bg-customRed text-white rounded-[50%]" : ""}`}
             >
               {page + 1}
             </button>
           ))}
           <button
-            onClick={() => handlePageChange(currentPage + 1)}
+            onClick={() => handlePageChangeAndScroll(currentPage + 1)}
             disabled={currentPage === Math.ceil(filteredStocks.length / itemsPerPage)}
             className="p-2"
           >

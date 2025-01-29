@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { IoChevronBack } from "react-icons/io5";
 import { Button } from "@/components/ui/button";
@@ -11,8 +11,11 @@ import StocksFilter from "./stocksFilter";
 
 const StockSection = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const categoryFromQuery = searchParams.get("category");
+
   const [priceRange, setPriceRange] = useState<[number, number]>([15000, 100000]);
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedCategory, setSelectedCategory] = useState(categoryFromQuery || "All");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
 
@@ -42,11 +45,11 @@ const StockSection = () => {
   );
 
   return (
-    <div className="bg-gray-100 pt-5 min-h-screen relative">
+    <div className="bg-customGray pt-5 min-h-screen relative">
       {/* Back Button */}
       <Button
-        onClick={() => router.push("/")}
-        className="relative md:top-5 lg:left-10 left-4 bg-customRed hover:bg-customRed text-white md:p-5 py-3 px-4 rounded-md flex items-center gap-2 font-bold md:text-base text-sm"
+        onClick={() => router.push("/allpages/about")}
+        className="relative md:top-5 lg:left-10 left-4 bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 md:p-5 py-3 px-4 rounded-lg flex items-center gap-2 font-bold md:text-base text-sm"
       >
         <IoChevronBack size={18} /> Back
       </Button>
@@ -104,7 +107,7 @@ const StockSection = () => {
           priceRange={priceRange}
         />
       </div>
-      <div className="h-20 w-full bg-gray-100"></div>
+      <div className="h-20"></div>
     </div>
   );
 };

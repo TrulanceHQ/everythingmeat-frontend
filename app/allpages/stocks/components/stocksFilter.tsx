@@ -27,8 +27,10 @@ const StocksFilter: React.FC<StocksFilterProps> = ({ priceRange, setPriceRange, 
       <div className="mb-6 lg:hidden flex flex-row md:space-x-6 space-x-2">
         <DropdownMenu open={isCategoryOpen} onOpenChange={setIsCategoryOpen}>
           <DropdownMenuTrigger className="w-full md:w-40 text-center border-2 border-customRed py-1 rounded-full flex flex-row justify-center space-x-2">
-            <p className="text-sm md:text-base font-medium">Category</p>
-            <span>{isCategoryOpen ? <FaSortUp className="text-sm md:text-base" /> : <FaSortDown className="text-sm md:text-base" />}</span>
+            <p className={`text-sm md:text-base ${isCategoryOpen ? 'font-medium text-black' : 'font-normal text-gray-500'}`}>Category</p>
+            <span className={`transition-transform duration-300 text-xs ${isCategoryOpen ? "rotate-0 mt-2" : ""}`}>
+              {isCategoryOpen ? <FaSortUp className="text-sm md:text-base text-black" /> : <FaSortDown className="text-sm md:text-base text-gray-500" />}
+            </span>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-full">
             {[
@@ -61,8 +63,10 @@ const StocksFilter: React.FC<StocksFilterProps> = ({ priceRange, setPriceRange, 
         </DropdownMenu>
         <DropdownMenu open={isPriceRangeOpen} onOpenChange={setIsPriceRangeOpen}>
           <DropdownMenuTrigger className="w-full md:w-40 text-center border-2 border-customRed py-1 rounded-full flex flex-row justify-center space-x-2">
-            <p className="text-sm md:text-base font-medium">Price Range (₦)</p>
-            <span>{isPriceRangeOpen ? <FaSortUp className="text-sm md:text-base" /> : <FaSortDown className="text-sm md:text-base" />}</span>
+            <p className={`text-sm md:text-base ${isPriceRangeOpen ? 'font-medium text-black' : 'font-normal text-gray-500'}`}>Price Range (₦)</p>
+            <span className={`transition-transform duration-300 text-xs ${isPriceRangeOpen ? "rotate-0 mt-2" : ""}`}>
+              {isPriceRangeOpen ? <FaSortUp className="text-sm md:text-base text-black" /> : <FaSortDown className="text-sm md:text-base text-gray-500" />}
+            </span>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="w-full p-5">
             <div className="flex text-xs md:text-base mt-2 mb-5">
