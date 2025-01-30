@@ -1,0 +1,26 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Users\Eniola\AppData\Roaming\npm\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.8.1
+2 info using node@v20.14.0
+3 silly config load:file:C:\Users\Eniola\AppData\Roaming\npm\node_modules\npm\npmrc
+4 silly config load:file:c:\Users\Eniola\everythingmeat-frontend\.npmrc
+5 silly config load:file:C:\Users\Eniola\.npmrc
+6 silly config load:file:C:\Users\Eniola\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm view next description dist-tags.latest homepage version time
+8 verbose argv "view" "--json" "--" "next" "description" "dist-tags.latest" "homepage" "version" "time"
+9 verbose logfile logs-max:10 dir:C:\Users\Eniola\everythingmeat-frontend\UsersEniolaAppDataRoamingnpm-cache\_logs\2024-12-30T04_16_49_714Z-
+10 verbose logfile C:\Users\Eniola\everythingmeat-frontend\UsersEniolaAppDataRoamingnpm-cache\_logs\2024-12-30T04_16_49_714Z-debug-0.log
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 http fetch GET 200 https://registry.npmjs.org/npm 2140ms
+14 http fetch GET 200 https://registry.npmjs.org/next 3066ms (cache updated)
+15 verbose cwd c:\Users\Eniola\everythingmeat-frontend
+16 verbose os Windows_NT 10.0.19045
+17 verbose node v20.14.0
+18 verbose npm  v10.8.1
+19 notice
+19 notice New major version of npm available! 10.8.1 -> 11.0.0
+19 notice Changelog: https://github.com/npm/cli/releases/tag/v11.0.0
+19 notice To update run: npm install -g npm@11.0.0
+19 notice  { force: true, [Symbol(proc-log.meta)]: true }
+20 verbose exit 0
+21 info ok
