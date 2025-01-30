@@ -50,7 +50,7 @@ export function Page() {
     };
 
     return (
-        <div className="w-[788px] flex flex-col flex-shrink overflow-x-auto">
+        <div className="w-[550px] md:w-[600px] lg:w-[600px] flex flex-col flex-shrink">
             {/* CARD HEADER */}
             <div className="bg-customOrange md:block rounded-xl gap-3 p-3">
                 <div className="w-full flex flex-row justify-between px-3">
@@ -67,7 +67,7 @@ export function Page() {
             {cartContent.map((item, index) => (
                 <div
                     key={item.id}
-                    className="flex flex-col lg:flex-row justify-center items-center lg:justify-between p-5 overflow-x-scroll"
+                    className="flex flex-col lg:flex-row justify-center items-center lg:justify-between p-5"
                 >
                     <div className="w-full flex flex-row justify-between px-3 items-center">
                         {/* PRODUCT IMAGE AND AMOUNT */}

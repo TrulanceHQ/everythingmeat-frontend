@@ -8,15 +8,19 @@ const CheckOutHeader = () => {
     return (
         <div className="bg-gray-100 flex flex-col justify-center items-center h-36">
             <div className="py-2 absolute top-[55px] left-2 m-3 md:top-36">
-                <Button className="!bg-customRed p-1 w-auto flex !flex-row !items-center">
-                    {" "}
+                <Button className="!bg-customRed p-1 w-auto !flex-row hidden md:flex !items-center">
+                    <div className="flex items-center">
+                        <IoChevronBack />
+                        <span className="text-white">Back</span>
+                    </div>
+                </Button>
+                <Button className="!bg-customRed p-1 w-auto m-1 flex md:hidden !flex-row !items-center ">
                     <IoChevronBack />
-                    <span className="hidden md:block">Back</span>
                 </Button>
             </div>
             <Image src={dotframe} alt="dot-frame" width={70} className="relative top-4 left-52 hidden lg:block" />
-            <h3 className="absoulte font-bold text-4xl">My Account</h3>
-            <p className="font-normal text-x">Home / Booking Cart/ Check Out</p>
+            <h3 className="absoulte font-bold text-3xl md:text-4xl">My Account</h3>
+            <p className="font-normal text-base">Home / Booking Cart / Check Out</p>
             <Image src={dotframe} alt="dot-frame" width={70} className="relative -left-60 bottom-4 hidden lg:block" />
         </div>
     );

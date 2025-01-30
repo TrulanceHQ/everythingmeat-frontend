@@ -4,7 +4,7 @@ import React from "react";
 
 const Page = () => {
     return (
-        <div className="w-full p-2 ml-4">
+        <div className="w-full lg:w-[800px] md:w-[400px] p-2 ml-4">
             <div className="flex flex-col justify-start items-start">
                 <h1 className="text-2xl font-bold">Change Password</h1>
                 <p className="text-sm font-normal">Please provide below information to change your password.</p>
@@ -51,7 +51,7 @@ const Page = () => {
                     />
                 </div>
                 <div className="flex items-start justify-start py-2">
-                    <Button className="!bg-customRed p-1 w-1/4">Change Password</Button>
+                    <Button className="!bg-customRed p-1 w-auto">Change Password</Button>
                 </div>
             </form>
         </div>

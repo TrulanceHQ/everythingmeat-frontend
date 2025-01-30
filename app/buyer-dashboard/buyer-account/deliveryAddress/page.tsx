@@ -40,7 +40,7 @@ const Page = () => {
     ];
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     return (
-        <div className="mb-2 w-full lg:max-w-[900px] lg:min-w-[700px] md:w-[550px] flex flex-col gap-2">
+        <div className="mb-2 w-full lg:w-[800px] md:w-[400px] flex flex-col gap-2">
             {/* SHOW REGISTERED ADDRESS */}
             <div className="border border-customGray flex flex-col rounded-xl p-3 w-full">
                 {DeliveryAddress.map((address, index) => (

@@ -15,7 +15,8 @@ export default {
   			background: 'var(--background)',
   			foreground: 'var(--foreground)',
   			customRed: '#AF0202',
-			  customGray: '#918c8c',
+			customGray: '#918c8c',
+			customOrange: '#FFBA35'
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

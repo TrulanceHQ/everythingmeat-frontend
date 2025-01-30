@@ -1,4 +1,4 @@
-import CheckOutHeader from "../components/checkoutHeader/checkoutHeader";
+import CheckOutHeader from "../../components/checkoutHeader/checkoutHeader";
 
 export default function RootLayout({children}: Readonly<{children: React.ReactNode}>) {
     return (

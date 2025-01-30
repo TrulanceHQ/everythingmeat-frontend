@@ -4,7 +4,7 @@ import paystackpage from "@/public/buyersImage/paystack_img.jpg";
 import transaction_icon from "@/public/buyersImage/transference 1.png";
 import atm_card from "@/public/buyersImage/atm-card 1.png";
 import Image from "next/image";
-import FundForm from "../funding-method/fundForm";
+import FundForm from "../../components/fundForm/fundForm";
 
 const Page = () => {
     const [fundWallet, setFundWallet] = React.useState<boolean>(false);
@@ -24,7 +24,7 @@ const Page = () => {
                     className="border border-customGray w-1/2 flex flex-row justify-start gap-3 my-3 p-3 rounded-md hover: cursor-pointer"
                     onClick={() => setFundWallet(!fundWallet)}
                 >
-                    <Image src={transaction_icon} alt="Visa_logo" width={32} height={32} className="" />
+                    <Image src={transaction_icon} alt="Visa_logo" className="h-6 md:h-7 lg:h-8" />
                     <span className="text-xl font-normal">Pay from wallet</span>
                 </div>
                 {fundWallet && <Image src={paystackpage} alt="Paystack_page" width={400} height={400} className="" />}
@@ -35,7 +35,7 @@ const Page = () => {
                     className="border border-customGray w-1/2 flex flex-row justify-start gap-3 my-3 p-3 rounded-md hover:cursor-pointer"
                     onClick={() => setWithdraw(!withdraw)}
                 >
-                    <Image src={atm_card} alt="Visa_logo" width={41} height={32} className="" />
+                    <Image src={atm_card} alt="Visa_logo" className="h-6 md:h-7 lg:h-8" />
                     <span className="text-lg font-normal">Add New Debit or Credit Card</span>
                 </div>
                 <div className="h-fit">{withdraw && <FundForm />}</div>

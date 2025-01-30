@@ -22,13 +22,13 @@ export function Page() {
         },
     ];
     return (
-        <div className=" w-full lg:w-[930px] flex flex-col">
+        <div className=" w-full lg:w-[800px] md:w-[400px] flex flex-col overflow-x-scroll">
             {/* CARD HEADER */}
-            <div className="bg-customOrange hidden lg:flex flex-row justify-around rounded-t-3xl gap-3">
+            <div className="bg-customOrange lg:flex flex-row justify-around rounded-t-3xl gap-3">
                 {cardContent.map((content, index) => (
                     <div key={index} className="flex flex-col p-3">
-                        <p className="text-[#606060] text-sm font-normal text-left">{content.title}</p>
-                        <h2 className="text-black text-2xl font-medium">{content.value}</h2>
+                        <p className="text-[#606060] text-xs md:text-sm font-normal text-left">{content.title}</p>
+                        <h2 className="text-black text-xl md:text-2xl font-medium">{content.value}</h2>
                     </div>
                 ))}
             </div>
@@ -37,17 +37,17 @@ export function Page() {
                 <div className="flex flex-row">
                     <Image src={christmas_goat} alt="christmas goat" height={100} width={100} />
                     <div className="flex flex-col justify-center gap-2 p-3">
-                        <h1 className="text-2xl font-medium">Christmas Goat</h1>
-                        <p className="text-[#606060] text-sm"> Slot 3</p>
+                        <h1 className="text-xl md:text-2xl font-medium">Christmas Goat</h1>
+                        <p className="text-[#606060] text-xs md:text-sm"> Slot 3</p>
                     </div>
                 </div>
-                <p className="text-[20px] font-medium">&#8358; 35,000</p>
+                <p className="text-lg md:text-xl font-medium">&#8358; 35,000</p>
             </div>
             <div className="mt-5 py-3">
-                <input type="checkbox" className="h-5 w-5 checked:bg-customRed py-2" />{" "}
-                <span>Your order has been accepted.</span>
-                <Button className="bg-customRed text-white w-1/4 mt-2 hover:!bg-gray-100 hover:!text-customRed hover:border-customRed">
-                    Download Receipt{" "}
+                <input type="checkbox" className="h-5 w-5 checked:bg-customRed py-2" />
+                <span className="p-2">Your order has been accepted.</span>
+                <Button className="bg-customRed text-white w-fit mt-2 hover:!bg-gray-100 hover:!text-customRed hover:border-customRed">
+                    Download Receipt
                 </Button>
             </div>
         </div>

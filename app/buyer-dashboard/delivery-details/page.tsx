@@ -11,10 +11,10 @@ import {FaPhone} from "react-icons/fa6";
 const Page = () => {
     const [selectedOption, setSelectedOption] = useState<string | null>(null);
     return (
-        <div className="w-full lg:max-w-[900px] lg:min-w-[700px] md:w-[550px] flex flex-col gap-2 m-8 p-3 ">
+        <div className="w-[300px] lg:max-w-[900px] lg:min-w-[700px] md:w-[550px] flex flex-col gap-2 md:m-8 p-3 m-auto">
             {/* DELIVERY ADDRESS DETAILS */}
-            <div className="flex flex-col justify-start text-left my-3">
-                <h1 className="text-3xl font-bold">Delivery Details</h1>
+            <div className="flex flex-col justify-center md:justify-start text-left my-3">
+                <h1 className="text-xl md:text-3xl font-bold">Delivery Details</h1>
                 <p className="text-sm font-normal">
                     Please provide an accurate delivery details to ensure prompt and secure reciept of your booking.
                 </p>

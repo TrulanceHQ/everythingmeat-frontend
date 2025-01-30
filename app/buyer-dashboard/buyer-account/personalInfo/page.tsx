@@ -18,7 +18,7 @@ const Page = () => {
         fileInputRef.current?.click();
     };
     return (
-        <div className="mb-2 w-full lg:w-[930px]">
+        <div className="mb-2 w-full lg:w-[800px]">
             <form className="p-2 flex flex-col gap-2">
                 {/* PROFILE IMG */}
                 <div className="mb-2">
