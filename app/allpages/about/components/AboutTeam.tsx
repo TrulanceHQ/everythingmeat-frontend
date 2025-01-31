@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const teamMembers = [
   {
@@ -64,10 +65,12 @@ const AboutTeam = () => {
               onClick={() => toggleExpand(member.name)}
             >
               <div className="relative w-full h-full">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover rounded-tr-[50px] rounded-bl-[50px]"
+                  layout="fill"
+                  objectFit="cover"
+                  className="rounded-tr-[50px] rounded-bl-[50px]"
                 />
                 <div className="absolute bottom-0 w-full h-32 bg-gradient-to-t from-black to-transparent rounded-bl-[50px]"></div>
               </div>

@@ -22,7 +22,7 @@ const AboutHero = () => {
       {/* Back Button */}
       <Button
         onClick={() => router.push("/")}
-        className="relative md:top-5 lg:left-10 left-4 bg-customRed hover:bg-customRed text-white md:p-5 py-3 px-4 rounded-md flex items-center gap-2 font-bold md:text-base text-sm"
+        className="relative md:top-5 lg:left-10 left-4 bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 md:p-5 py-3 px-4 rounded-lg flex items-center gap-2 font-bold md:text-base text-sm"
       >
         <IoChevronBack size={18} /> Back
       </Button>
@@ -92,7 +92,7 @@ const AboutHero = () => {
 
         {/* Stats Section */}
         <div className="mt-12 flex justify-center">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 bg-amber-400 py-5 rounded-xl lg:px-4 md:px-0 w-full max-w-5xl px-5">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-4 bg-[#FFBA35] py-5 rounded-xl lg:px-4 md:px-0 w-full max-w-5xl px-5">
             {stats.map((stat, index) => (
               <div
                 key={stat.label}

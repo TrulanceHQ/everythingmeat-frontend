@@ -6,6 +6,7 @@ import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { MdOutlineZoomOutMap } from "react-icons/md";
 import { HiOutlineShoppingBag } from "react-icons/hi2";
 import { useRef } from "react";
+import Image from "next/image";
 
 const stocks = [
   {
@@ -87,9 +88,11 @@ const HomeStock = () => {
             <Card key={stock.id} className="flex-shrink-0 w-full max-w-[300px] sm:max-w-[350px] max-h-[620px] mx-auto hover:shadow-2xl border-none duration-500">
               <CardHeader>
                 <div className="relative">
-                  <img
+                  <Image
                     src={stock.image}
                     alt={stock.title}
+                    width={300}
+                    height={300}
                     className="rounded-lg object-cover w-full h-60 sm:h-80"
                   />
                   <div className="absolute top-5 right-2 flex flex-col space-y-2">
@@ -110,7 +113,7 @@ const HomeStock = () => {
                 <p className="text-sm">Available slot <span className="text-customRed font-bold">{stock.slotsOut}</span> out of <span className="font-bold">{stock.slotsAvailable}</span></p>
               </CardContent>
               <CardFooter>
-                <Button className="bg-customRed text-white md:py-6 md:px-4 py-4 px-2 rounded-lg w-full hover:bg-customRed">
+                <Button className="bg-customRed hover:bg-white text-white hover:text-customRed border-2 border-customRed duration-200 rounded-lg duration-200 md:py-6 md:px-4 py-4 px-2 w-full">
                   Book Now
                 </Button>
               </CardFooter>
