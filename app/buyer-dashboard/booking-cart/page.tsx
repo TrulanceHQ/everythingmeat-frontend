@@ -6,29 +6,58 @@ import {RiCoupon3Line} from "react-icons/ri";
 import {Button, TextInput, Label} from "flowbite-react";
 import Image from "next/image";
 import {RxCross1} from "react-icons/rx";
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
+import useCreateCart from "../../../hooks/useCreateCart"; // Import the custom hook
+
 
 export function Page() {
     const [cartContent, setCartContent] = useState([
         {
             id: 1,
+            buyerId: "Demo_buyer1",
+            productId: "Demo_product1",
+            quantity: 1,
             productName: "Christmas Goat",
             productImage: christmas_goat,
             slotNumber: "3",
             productWeight: "20kg",
             productPrice: 35000,
-            quantity: 1,
         },
         {
             id: 2,
+            buyerId: "Demo_buyer1",
+            productId: "Demo_product1",
+            quantity: 1,
             productName: "Christmas Chicken",
             productImage: christmas_goat,
             slotNumber: "3",
             productWeight: "20kg",
             productPrice: 25000,
-            quantity: 1,
         },
     ]);
+    const {createCart, loading, error, success} = useCreateCart(); // Use the custom hook
+    const [buyerId, setBuyerId] = useState<string | null>(null);
+    
+    useEffect(() => {
+        // Fetch buyerId from the user endpoint
+        const fetchBuyerId = async () => {
+            try {
+                const response = await fetch("/api/user"); // Replace with your user endpoint
+                if (!response.ok) {
+                    throw new Error("Failed to fetch buyerId");
+                }
+                const data = await response.json();
+                setBuyerId(data.id); // Assuming the user endpoint returns an object with an id property
+                if (!data.id) {
+                    setBuyerId("Demo_buyer");
+                }
+            } catch (error) {
+                console.error("Error fetching buyerId:", error);
+            }
+        };
+
+        fetchBuyerId();
+    }, []);
 
     const handleIncrement = (index: number) => {
         const newCartContent = [...cartContent];
@@ -49,6 +78,19 @@ export function Page() {
         setCartContent(newCartContent);
     };
 
+    const clearCart = () => {
+        setCartContent([]);
+    };
+
+    const handleCreateCart = () => {
+        const cart = cartContent.map((item) => ({
+            buyerId,
+            prodId: item.id.toString(),
+            slot: item.slotNumber,
+        }));
+        createCart(cart);
+    };
+
     return (
         <div className="w-[550px] md:w-[600px] lg:w-[600px] flex flex-col flex-shrink">
             {/* CARD HEADER */}
@@ -58,7 +100,7 @@ export function Page() {
                         <h2 className="text-black text-2xl font-medium">Product</h2>
                     </div>
                     <div className="flex flex-row justify-between px-2 w-[40%]">
-                        <h2 className="text-black text-2xl font-medium">Slot Number</h2>
+                        <h2 className="text-black text-2xl font-medium">Slot</h2>
                         <h2 className="text-black text-2xl font-medium">Price</h2>
                     </div>
                 </div>
@@ -130,9 +172,23 @@ export function Page() {
                     {/* NB: COUPON TYPE TO BE SPECIFIED LATER */}
                 </div>
                 <div className="flex flex-row items-center gap-3">
-                    <Button className="bg-customGray text-white w-[171px] hover:!border-customRed">Apply</Button>
+                    <Button
+                        className="bg-customGray text-white w-[171px] hover:!border-customRed hover:!bg-customRed"
+                        onClick={() => handleCreateCart()}
+                        disabled={loading}
+                    >
+                        {loading ? "Creating Cart..." : "Create Cart"}
+                    </Button>
+
+                    {error && <p className="text-red-500 mt-2">{error}</p>}
+                    {success && <p className="text-green-500 mt-2">Cart created successfully!</p>}
                     <div>
-                        <a className="text-customRed underline">Clear Cart</a>
+                        <a
+                            className="text-customRed underline hover:text-customGray hover:cursor-pointer"
+                            onClick={() => clearCart()}
+                        >
+                            Clear Cart
+                        </a>
                     </div>
                 </div>
             </div>
