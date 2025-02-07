@@ -41,7 +41,7 @@ export function useLogin() {
       } else if (userRole === "seller") {
         router.push("/seller-dashboard");
       } else if (userRole === "buyer") {
-        router.push("/buyer-dashboard");
+        router.push("/buyer-dashboard/buyer-account/personalInfo");
       }
     } catch (error) {
       if (error instanceof Error) {
