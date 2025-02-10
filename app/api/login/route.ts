@@ -40,6 +40,17 @@ export async function POST(req: NextRequest) {
         path: "/",
         sameSite: "strict",
       });
+      (await cookies()).set({
+        name: "userId",
+        value: data.user._id,
+        secure:
+          process.env.NODE_ENV !== "development" &&
+          process.env.NODE_ENV !== "test",
+        httpOnly: true,
+        maxAge: 40 * 60, // 20 minutes
+        path: "/",
+        sameSite: "strict",
+      });
       return NextResponse.json({ message: data }, { status: 200 });
     } else if (response.status === 401) {
       return NextResponse.json({ message: data }, { status: 401 });
