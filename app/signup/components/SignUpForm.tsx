@@ -56,7 +56,7 @@ const SignUpForm = () => {
     },
   });
 
-  const { signUpNewUser, setError, loading, success, error} =
+  const { signUpNewUser, setError, loading, success, error, errorMessage} =
     useSignUp();
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
@@ -227,7 +227,7 @@ const SignUpForm = () => {
             <div className="flex flex-col space-y-4">
               {error && (
                 <ErrorAlert
-                  errorMessage={"Email already exist!!!"}
+                  errorMessage={errorMessage}
                   onDismiss={handleDismiss}
                 />
               )}
