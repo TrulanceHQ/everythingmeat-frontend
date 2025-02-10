@@ -39,7 +39,7 @@ const LoginForm = () => {
     },
   });
 
-  const { userLogin, loading, error, setError } = useLogin();
+  const { userLogin, loading, error, setError, errorMessage } = useLogin();
 
   const handleDismiss = () => {
     setError(false);
@@ -142,7 +142,7 @@ const LoginForm = () => {
         <div className="flex flex-col space-y-4">
           {error && (
             <ErrorAlert
-              errorMessage={"Invalid Credentials"}
+              errorMessage={errorMessage}
               onDismiss={handleDismiss}
             />
           )}

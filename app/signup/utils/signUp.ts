@@ -28,7 +28,7 @@ export function useSignUp() {
 
       if (!response.ok) {
         const errorData = await response.json();
-        setErrorMessage(errorData.message);
+        setErrorMessage(errorData.message.message);
         setError(true);
         return;
       }
