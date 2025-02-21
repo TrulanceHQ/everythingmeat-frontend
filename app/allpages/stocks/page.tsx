@@ -1,11 +1,14 @@
+import {StockProvider} from "@/app/context/StockContext";
 import StockSection from "./components/stockSection";
 
 const StocksPage = () => {
-  return (
-    <>
-      <StockSection />
-    </>
-  );
+    return (
+        <>
+            <StockProvider>
+                <StockSection />
+            </StockProvider>
+        </>
+    );
 };
 
 export default StocksPage;
