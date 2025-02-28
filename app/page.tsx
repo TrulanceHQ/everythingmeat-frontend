@@ -1,16 +1,14 @@
 "use client";
 
 import React, { useState } from "react";
-import SellerDefault from "./section/SellerDefault";
-import TotalSales from "./section/totalSales/TotalSales";
-import TotalCommission from "./section/totalCommissions/TotalCommission";
-import TotalSellers from "./section/totalSellers/TotalSellers";
-import TotalBuyers from "./section/totalBuyers/TotalBuyers";
-import PersonalInformation from "./section/personalInformation/PersonalInformation";
-import MyProduct from "./section/productList/MyProduct";
-import PaymentRequest from "./section/paymentRequest/PaymentRequest";
-import ChangePassword from "./section/changePassword/ChangePassword";
-import Logout from "./section/logOut/Logout";
+import SellerDefault from "./seller-dashboard/SellerDefault";
+import PersonalInformation from "./seller-dashboard/section/personalInformation/PersonalInfomration";
+import MyProduct from "./seller-dashboard/section/product/Product";
+import Order from "./seller-dashboard/section/order/Order"
+import Withdrawal from "./seller-dashboard/section/withdrawal/Withdrawal";
+import ChangePassword from "./seller-dashboard/section/changePassword/ChangePassword";
+import Logout from "./seller-dashboard/section/logout/Logout";
+import ProductUpload from "./seller-dashboard/section/productUpload/ProductUpload";
 
 const Page: React.FC = () => {
   const [activeComponent, setActiveComponent] = useState<string>("Default");
@@ -31,24 +29,20 @@ const Page: React.FC = () => {
     switch (activeComponent) {
       case "Default":
         return <SellerDefault handleCardClick={onCardClick} />;
-      case "totalSales":
+      case "Withdrawal":
         return (
-          <TotalSales onClick={onBackClick} handleSectionClick={onNavigate} />
+          <Withdrawal onClick={onBackClick} handleSectionClick={onNavigate} />
         );
-      case "totalBuyers":
+      case "Order":
         return (
-          <TotalBuyers onClick={onBackClick} handleSectionClick={onNavigate} />
+          <Order onClick={onBackClick} handleSectionClick={onNavigate} />
         );
-      case "totalCommission":
+      case "ProductUpload":
         return (
-          <TotalCommission
+          <ProductUpload
             onClick={onBackClick}
             handleSectionClick={onNavigate}
           />
-        );
-      case "totalSellers":
-        return (
-          <TotalSellers onClick={onBackClick} handleSectionClick={onNavigate} />
         );
       case "personalInformation":
         return (
@@ -64,13 +58,6 @@ const Page: React.FC = () => {
             handleSectionClick={onNavigate}
           />
         );
-        case "paymentRequest":
-          return (
-            <PaymentRequest
-              onClick={onBackClick}
-              handleSectionClick={onNavigate}
-            />
-          );
           case "changePassword":
           return (
             <ChangePassword

@@ -31,7 +31,7 @@ const SellerOrderPage = () => {
         <p className="text-gray-500 mb-6">Home / My account</p>
       </div>
       
-      <div classname="flex">
+    
       <div className="max-w-7xl mx-auto p-6 bg-white ">
       <div className="flex gap-8 bg-white ">
         {/* Account Section (Left Sidebar) */}
