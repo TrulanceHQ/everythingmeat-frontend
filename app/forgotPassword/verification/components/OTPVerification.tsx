@@ -102,7 +102,7 @@ const OTPVerification = ({ onSubmit, loading, userEmail }: Props) => {
           <button
             className={`font-bold text-base text-gray-600 underline ${formattedTime === "0:00" ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
             onClick={() => restart(userEmail)}
-            // disabled={formattedTime !== "0:00"}
+            disabled={formattedTime !== "0:00"}
             type="submit"
           >
             Resend
