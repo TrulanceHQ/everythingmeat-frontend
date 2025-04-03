@@ -4,9 +4,10 @@ import OTPVerification from "./OTPVerification";
 
 type Props = {
     onSubmit: (otp: string) => void;
+    userEmail: string;
 }
 
-const OTPPage = ({onSubmit} : Props) => {
+const OTPPage = ({onSubmit, userEmail = ""} : Props) => {
   return (
     <div className="bg-[#F2F2F2] h-screen flex flex-col justify-center items-center">
       <div className="relative">
@@ -26,9 +27,7 @@ const OTPPage = ({onSubmit} : Props) => {
             </p>
             <hr className="w-[4rem] mt-2 h-1 bg-customRed border-none" />
           </div>
-          <div className="py-4">
-            <OTPVerification onSubmit={onSubmit}/>
-          </div>
+            <OTPVerification onSubmit={onSubmit} userEmail={userEmail} />
         </div>
 
         <Image

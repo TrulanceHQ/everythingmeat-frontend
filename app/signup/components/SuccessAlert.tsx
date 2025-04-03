@@ -20,7 +20,7 @@ const Success = () => {
     }, [router]);
   return (
     <Alert variant="default">
-      <AlertTitle className="text-2xl font-bold text-green-800">Registration Successful!</AlertTitle>
+      <AlertTitle className="text-2xl font-bold text-green-800">Verification Successful!</AlertTitle>
       <AlertDescription>
       <p className="mt-4 text-green-700">
         You are being redirected to the login page. If you are not redirected,{" "}

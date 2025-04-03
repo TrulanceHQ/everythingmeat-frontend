@@ -20,16 +20,17 @@ import {
 import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp";
 import { useOTPTimer } from "../hooks/useOTPTimer";
 
-
 type Props = {
-    onSubmit: (otp: string) => void;
+  onSubmit: (otp: string) => void;
+  loading?: boolean;
+  userEmail: string;
 };
 
 const formSchema = z.object({
   otp: z.string().min(6, "Enter complete code"),
 });
 
-const OTPVerification = ({ onSubmit }: Props) => {
+const OTPVerification = ({ onSubmit, loading, userEmail }: Props) => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -41,11 +42,14 @@ const OTPVerification = ({ onSubmit }: Props) => {
     onSubmit(data.otp);
   };
 
-  const { formattedTime, restart } = useOTPTimer(120);
+  const { formattedTime, restart, OTPResentResponse } = useOTPTimer(120);
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-4">
+      <form
+        onSubmit={form.handleSubmit(handleSubmit)}
+        className="space-y-4 flex flex-col items-center justify-center"
+      >
         <FormField
           control={form.control}
           name="otp"
@@ -86,7 +90,7 @@ const OTPVerification = ({ onSubmit }: Props) => {
           type="submit"
           className="w-full bg-customRed text-base font-bold py-5"
         >
-          Verify
+          {loading ? "Verifying..." : "Verify"}
         </Button>
         <div className="flex flex-row items-center justify-center space-x-6">
           <p className="font-normal text-base text-[#1D0101]">
@@ -95,13 +99,18 @@ const OTPVerification = ({ onSubmit }: Props) => {
               {formattedTime}
             </span>
           </p>
-          <p
-            className="font-bold text-base text-gray-600 underline"
-            onClick={restart}
+          <button
+            className={`font-bold text-base text-gray-600 underline ${formattedTime === "0:00" ? "cursor-pointer" : "cursor-not-allowed opacity-50"}`}
+            onClick={() => restart(userEmail)}
+            // disabled={formattedTime !== "0:00"}
+            type="submit"
           >
             Resend
-          </p>
+          </button>
         </div>
+          {OTPResentResponse && (
+            <p className="text-gray-900">{OTPResentResponse}</p>
+          )}
       </form>
     </Form>
   );
